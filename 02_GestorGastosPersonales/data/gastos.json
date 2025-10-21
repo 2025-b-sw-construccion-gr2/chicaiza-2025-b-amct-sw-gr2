@@ -1,0 +1,14 @@
+[
+  {
+    "descripcion": "Alimento",
+    "monto": 20,
+    "categoria": "Alimentos",
+    "fecha": "20/10/2025"
+  },
+  {
+    "descripcion": "Tecnología",
+    "monto": 100,
+    "categoria": "Otros",
+    "fecha": "20/10/2025"
+  }
+]

@@ -35,11 +35,11 @@ export async function solicitarGasto(categorias) {
       type: 'list',
       name: 'categoria',
       message: 'Selecciona la categoría:',
-      choices: [...categorias, 'OTROS'],
+      choices: [...categorias, 'Otros'],
     },
   ]);
 
-  if (respuestas.categoria === 'OTROS') {
+  if (respuestas.categoria === 'Otros') {
     const { nuevaCategoria } = await inquirer.prompt([
       {
         type: 'input',

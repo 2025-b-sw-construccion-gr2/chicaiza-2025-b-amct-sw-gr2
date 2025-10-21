@@ -2,7 +2,7 @@ import { solicitarGasto, seleccionarCategoria } from './input.js';
 import { logger } from './logger.js';
 import Table from 'cli-table3';
 
-const categoriasBase = ['Alimentos', 'Transporte', 'Ropa', 'Entretenimiento', 'Hogar', 'Otros'];
+const categoriasBase = ['Alimentos', 'Transporte', 'Ropa', 'Entretenimiento', 'Hogar'];
 
 export async function agregarGasto(gastos) {
   const nuevoGasto = await solicitarGasto(categoriasBase);

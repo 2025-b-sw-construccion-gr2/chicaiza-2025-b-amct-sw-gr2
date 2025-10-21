@@ -1,7 +1,7 @@
 import fs from 'fs-extra';
 import { logger } from './logger.js';
 
-const FILE_PATH = './gastos.json';
+const FILE_PATH = './data/gastos.json';
 
 export async function cargarGastos() {
   try {
