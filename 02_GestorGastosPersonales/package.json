@@ -1,0 +1,27 @@
+{
+  "name": "02_GestorGastosPersonales",
+  "version": "1.0.0",
+  "description": "Aplicativo en Node.js para gestionar gastos personales con estadísticas simples y librerías reutilizables.",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [
+    "nodejs",
+    "gastos",
+    "inquirer",
+    "chalk",
+    "cli-table3",
+    "reutilizacion",
+    "universidad"
+  ],
+  "author": "Tu Nombre",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^5.3.0",
+    "cli-table3": "^0.6.3",
+    "fs-extra": "^11.2.0",
+    "inquirer": "^9.2.15"
+  }
+}
