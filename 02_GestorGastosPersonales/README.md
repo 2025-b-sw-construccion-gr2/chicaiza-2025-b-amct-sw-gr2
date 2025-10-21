@@ -4,7 +4,7 @@ Aplicativo en **Node.js** que permite registrar y visualizar tus gastos diarios 
 
 ## 🧠 Prompt utilizado
 
-> Necesito un ejemplo detallado en Node.js que cree un gestor de gastos personales, usando librerías propias y librerías externas como inquirer, chalk, fs-extra y cli-table3. Los gastos deben tener categoría, monto y descripción, además de proporcionar estadísticas
+Necesito un ejemplo completo en Node.js de un Gestor de Gastos Personales que use librerías propias reutilizables y librerías externas (inquirer, chalk, fs-extra, cli-table3). El programa debe permitir agregar, listar y filtrar gastos con descripción, monto y categoría (Alimentos, Transporte, Ropa, Hogar, Otros), mostrar estadísticas (total, promedio y por categoría), guardar los datos en JSON y mostrar tablas con formato y colores.
 
 ---
 
@@ -26,8 +26,10 @@ gestor-gastos/
 ## ⚙️ Instalación
 
 ```bash
-git clone ----
+git clone https://github.com/2025-b-sw-construccion-gr2/chicaiza-2025-b-amct-sw-gr2.git
+
 cd 02_GestorGastosPersonales
+
 npm install inquirer chalk fs-extra cli-table3
 ```
 
