@@ -1,0 +1,48 @@
+name: CI Checks
+
+on:
+  pull_request:
+    # ejecuta en cualquier PR
+    branches: ["**"]
+
+jobs:
+  ci:
+    name: Run format/lint/test/build
+    runs-on: ubuntu-latest
+    env:
+      CI: true
+    defaults:
+      run:
+        working-directory: 03_clases
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'npm'
+
+      - name: Cache node_modules
+        uses: actions/cache@v4
+        with:
+          path: 03_clases/node_modules
+          key: ${{ runner.os }}-node-${{ hashFiles('03_clases/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Format check
+        run: npm run format:check
+
+      - name: Lint
+        run: npm run lint
+
+      - name: Test
+        run: npm run test
+
+      - name: Build
+        run: npm run build

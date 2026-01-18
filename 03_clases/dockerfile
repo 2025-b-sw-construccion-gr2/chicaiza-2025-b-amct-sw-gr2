@@ -14,11 +14,8 @@ RUN npm install --production
 COPY . .
 
 # 6. Compila el proyecto NestJS
-# test, lint, format, build
 # format, lint, test, build
-RUN npm run format:check
-RUN npm run lint
-RUN npm run test
+# format y lint se verifican en CI
 RUN npm run build
 
 # 7. Expone el puerto en el que corre tu app (por defecto 3000)
