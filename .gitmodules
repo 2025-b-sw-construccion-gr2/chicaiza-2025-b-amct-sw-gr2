@@ -1,6 +1,6 @@
-[submodule "Calculadora/Resta"]
-	path = Calculadora/Resta
-	url = https://github.com/2025-b-sw-construccion-gr2/amct-resta.git
-[submodule "Calculadora/Suma"]
-	path = Calculadora/Suma
+[submodule "01_Calculadora/Suma"]
+	path = 01_Calculadora/Suma
 	url = https://github.com/2025-b-sw-construccion-gr2/amct-suma.git
+[submodule "01_Calculadora/Resta"]
+	path = 01_Calculadora/Resta
+	url = https://github.com/2025-b-sw-construccion-gr2/amct-resta.git
