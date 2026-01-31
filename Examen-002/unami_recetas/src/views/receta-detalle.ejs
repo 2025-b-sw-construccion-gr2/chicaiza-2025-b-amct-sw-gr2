@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --blanco: #FFFFFF;
+            --negro: #121212;
+            --verde: #2D5A27;
+            --verde-claro: #E8F5E9;
+            --cafe: #4B3621;
+            --crema: #F9F7F2;
+            --gris: #757575;
+            --transicion: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--crema);
+            color: var(--negro);
+            line-height: 1.6;
+        }
+
+        /* --- NAVIGATION --- */
+        nav {
+            padding: 1.5rem 10%;
+            background: var(--blanco);
+            border-bottom: 1px solid var(--negro);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            text-decoration: none;
+            color: var(--negro);
+            font-size: 1.5rem;
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: var(--negro);
+            font-size: 0.7rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: var(--transicion);
+        }
+
+        .nav-link:hover {
+            color: var(--verde);
+        }
+
+        /* --- HERO IMAGE --- */
+        .recipe-hero {
+            width: 100%;
+            height: 50vh;
+            min-height: 400px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .recipe-hero img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: blur(6px) brightness(0.8);
+            transform: scale(1.1);
+        }
+
+        .recipe-hero::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 50%;
+            background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+        }
+
+        .hero-content {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 3rem 10%;
+            z-index: 2;
+            color: var(--blanco);
+        }
+
+        .hero-content h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .recipe-meta {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .meta-icon {
+            font-size: 1.2rem;
+        }
+
+        /* --- TAGS --- */
+        .recipe-tags {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+        }
+
+        .tag {
+            background: var(--verde);
+            color: var(--blanco);
+            padding: 0.3rem 0.8rem;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* --- MAIN CONTENT --- */
+        .recipe-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+            display: grid;
+            grid-template-columns: 1fr 350px;
+            gap: 4rem;
+        }
+
+        @media (max-width: 900px) {
+            .recipe-content {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* --- INSTRUCTIONS --- */
+        .instructions-section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: var(--cafe);
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--negro);
+        }
+
+        .summary {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #444;
+            margin-bottom: 3rem;
+            padding: 2rem;
+            background: var(--blanco);
+            border: 1px solid var(--negro);
+        }
+
+        .summary a {
+            color: var(--verde);
+        }
+
+        .instructions {
+            font-size: 1rem;
+            line-height: 2;
+            color: #333;
+        }
+
+        .instructions ol {
+            padding-left: 1.5rem;
+        }
+
+        .instructions li {
+            margin-bottom: 1.5rem;
+            padding-left: 0.5rem;
+        }
+
+        .instructions p {
+            margin-bottom: 1rem;
+        }
+
+        /* --- INGREDIENTS SIDEBAR --- */
+        .ingredients-section {
+            position: sticky;
+            top: 100px;
+            height: fit-content;
+        }
+
+        .ingredients-card {
+            background: var(--blanco);
+            border: 1px solid var(--negro);
+            padding: 2rem;
+        }
+
+        .ingredients-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            color: var(--cafe);
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #eee;
+        }
+
+        .ingredients-list {
+            list-style: none;
+        }
+
+        .ingredient-item {
+            display: flex;
+            align-items: center;
+            padding: 0.8rem 0;
+            border-bottom: 1px solid #f5f5f5;
+            gap: 12px;
+        }
+
+        .ingredient-item:last-child {
+            border-bottom: none;
+        }
+
+        .ingredient-img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+            background: #f5f5f5;
+        }
+
+        .ingredient-info {
+            flex: 1;
+        }
+
+        .ingredient-name {
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-transform: capitalize;
+        }
+
+        .ingredient-amount {
+            font-size: 0.8rem;
+            color: var(--gris);
+        }
+
+        /* --- SOURCE BUTTON --- */
+        .source-section {
+            margin-top: 3rem;
+            text-align: center;
+        }
+
+        .btn-source {
+            display: inline-block;
+            background: var(--negro);
+            color: var(--blanco);
+            padding: 1.2rem 3rem;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 600;
+            font-size: 0.8rem;
+            transition: var(--transicion);
+        }
+
+        .btn-source:hover {
+            background: var(--verde);
+            transform: translateY(-3px);
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            padding: 6rem 2rem;
+            text-align: center;
+            background: var(--negro);
+            color: var(--blanco);
+            letter-spacing: 3px;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+        }
+
+        /* --- ANIMATIONS --- */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .instructions-section, .ingredients-section {
+            animation: fadeIn 0.8s ease forwards;
+        }
+
+        .ingredients-section {
+            animation-delay: 0.2s;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="/" class="logo">UMAMI</a>
+        <a href="/ingredientes" class="nav-link">&larr; Nueva Búsqueda</a>
+    </nav>
+
+    <header class="recipe-hero">
+        <img src="<%= receta.image %>"
+             alt="<%= receta.titleEs %>"
+             onerror="this.src='https://images.unsplash.com/photo-1546069901-ba9599a7e63c?q=80&w=1200&auto=format&fit=crop'">
+        <div class="hero-content">
+            <h1><%= receta.titleEs %></h1>
+            <div class="recipe-meta">
+                <div class="meta-item">
+                    <span class="meta-icon">⏱️</span>
+                    <span><%= receta.readyInMinutes %> minutos</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-icon">👥</span>
+                    <span><%= receta.servings %> porciones</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-icon">🥘</span>
+                    <span><%= receta.extendedIngredients ? receta.extendedIngredients.length : 0 %> ingredientes</span>
+                </div>
+            </div>
+            <div class="recipe-tags">
+                <% if (receta.vegetarian) { %>
+                    <span class="tag">🥬 Vegetariano</span>
+                <% } %>
+                <% if (receta.vegan) { %>
+                    <span class="tag">🌱 Vegano</span>
+                <% } %>
+                <% if (receta.glutenFree) { %>
+                    <span class="tag">🌾 Sin Gluten</span>
+                <% } %>
+                <% if (receta.dairyFree) { %>
+                    <span class="tag">🥛 Sin Lácteos</span>
+                <% } %>
+            </div>
+        </div>
+    </header>
+
+    <main class="recipe-content">
+        <section class="instructions-section">
+            <h2>Sobre esta Receta</h2>
+
+            <% if (receta.summaryEs) { %>
+                <div class="summary">
+                    <%= receta.summaryEs %>
+                </div>
+            <% } %>
+
+            <% if (receta.instructionsEs) { %>
+                <h2>Preparación</h2>
+                <div class="instructions">
+                    <%= receta.instructionsEs %>
+                </div>
+            <% } %>
+
+            <div class="source-section">
+                <% if (receta.sourceUrl) { %>
+                    <a href="<%= receta.sourceUrl %>" target="_blank" class="btn-source">
+                        Ver Receta Original →
+                    </a>
+                <% } else { %>
+                    <a href="https://spoonacular.com/recipes/<%= receta.title %>-<%= receta.id %>" target="_blank" class="btn-source">
+                        Ver en Spoonacular →
+                    </a>
+                <% } %>
+            </div>
+        </section>
+
+        <aside class="ingredients-section">
+            <div class="ingredients-card">
+                <h3>🛒 Ingredientes</h3>
+                <ul class="ingredients-list">
+                    <% if (receta.extendedIngredients) { %>
+                        <% for (const ing of receta.extendedIngredients) { %>
+                            <li class="ingredient-item">
+                                <img src="https://spoonacular.com/cdn/ingredients_100x100/<%= ing.image %>"
+                                     alt="<%= ing.nameEs %>"
+                                     class="ingredient-img"
+                                     onerror="this.src='https://spoonacular.com/cdn/ingredients_100x100/flour.png'">
+                                <div class="ingredient-info">
+                                    <div class="ingredient-name"><%= ing.nameEs %></div>
+                                    <div class="ingredient-amount"><%= ing.originalEs %></div>
+                                </div>
+                            </li>
+                        <% } %>
+                    <% } %>
+                </ul>
+            </div>
+        </aside>
+    </main>
+
+    <footer>
+        &copy; 2026 Recetas Umami &mdash; La Alquimia del Gusto
+    </footer>
+
+</body>
+</html>
