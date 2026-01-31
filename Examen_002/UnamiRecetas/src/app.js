@@ -23,24 +23,24 @@ app.use('/', routes);
 
 // Manejo de errores 404
 app.use((req, res) => {
-    res.status(404).render('inicio', {
-        title: 'Página no encontrada | Umami'
-    });
+  res.status(404).render('inicio', {
+    title: 'Página no encontrada | Umami',
+  });
 });
 
 // Manejo de errores generales
-app.use((err, req, res, next) => {
-    console.error('Error:', err);
-    res.status(500).send('Error interno del servidor');
+app.use((err, req, res, _next) => {
+  console.error('Error:', err);
+  res.status(500).send('Error interno del servidor');
 });
 
 // Iniciar servidor
 async function iniciarServidor() {
-    // Probar conexión a la base de datos
-    await testConnection();
+  // Probar conexión a la base de datos
+  await testConnection();
 
-    app.listen(PORT, () => {
-        console.log(`
+  app.listen(PORT, () => {
+    console.log(`
 ╔════════════════════════════════════════════════════╗
 ║                                                    ║
 ║     🍜  UMAMI - Sistema de Recetas                 ║
@@ -53,7 +53,7 @@ async function iniciarServidor() {
 ║                                                    ║
 ╚════════════════════════════════════════════════════╝
         `);
-    });
+  });
 }
 
 iniciarServidor();

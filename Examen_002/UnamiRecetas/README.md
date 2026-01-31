@@ -57,24 +57,27 @@ nodejs/
 ## 🔧 Instalación
 
 1. **Navegar a la carpeta del proyecto:**
+
    ```bash
    cd unami_recetas
    ```
 
 2. **Instalar dependencias:**
+
    ```bash
    npm install
    ```
 
 3. **Configurar variables de entorno:**
-   
+
    Edita el archivo `.env` con tus credenciales. Por motivos académicos, se incluyen valores por defecto.
 
 4. **Iniciar la aplicación:**
+
    ```bash
    # Modo desarrollo (con hot reload)
    npm run dev
-   
+
    # Modo producción
    npm start
    ```
@@ -86,21 +89,23 @@ nodejs/
 
 ## 📖 Rutas Disponibles
 
-| Método | Ruta | Descripción |
-|--------|------|-------------|
-| GET | `/` | Página de inicio |
-| GET | `/ingredientes` | Selección de ingredientes |
-| POST | `/recetas` | Buscar recetas con ingredientes |
-| GET | `/receta?id=123` | Ver detalle de una receta |
+| Método | Ruta             | Descripción                     |
+| ------ | ---------------- | ------------------------------- |
+| GET    | `/`              | Página de inicio                |
+| GET    | `/ingredientes`  | Selección de ingredientes       |
+| POST   | `/recetas`       | Buscar recetas con ingredientes |
+| GET    | `/receta?id=123` | Ver detalle de una receta       |
 
 ## 🔑 API Keys
 
 ### Spoonacular
+
 - Registro en [Spoonacular](https://spoonacular.com/food-api)
 - API Key gratuita
 - Límite: 150 requests/día en plan gratuito
 
 ### MyMemory (Traducciones)
+
 - No requiere API Key
 - Límite: 5000 caracteres/día sin registro
 
@@ -114,4 +119,3 @@ nodejs/
 - ✅ Detalle completo de recetas
 - ✅ Etiquetas de dieta (vegetariano, vegano, sin gluten)
 - ✅ Responsive design
-
