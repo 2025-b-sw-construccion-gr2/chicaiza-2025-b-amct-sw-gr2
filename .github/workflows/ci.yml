@@ -1,47 +1,239 @@
-name: CI Checks
+name: CI Pipeline
 
 on:
+  push:
+    branches: [main, develop, feature/**]
   pull_request:
-    # ejecuta en cualquier PR
-    branches: ["**"]
+    branches: [main, develop]
+    types: [opened, synchronize, reopened]
+
+env:
+  NODE_VERSION: "20"
+  WORKING_DIR: Examen_002/UnamiRecetas
+
+# Cancelar ejecuciones anteriores si se hace push nuevo al mismo branch
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
-  ci:
-    name: Run format/lint/test/build
+  # ─────────────────────────────────────────────
+  # 🔍 Lint: Análisis estático del código
+  # ─────────────────────────────────────────────
+  lint:
+    name: Lint Code
     runs-on: ubuntu-latest
-    env:
-      CI: true
-    defaults:
-      run:
-        working-directory: 03_clases
+
     steps:
-      - name: Checkout
+      - name: Checkout code
         uses: actions/checkout@v4
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '22'
-
-      - name: Cache node_modules
-        uses: actions/cache@v4
-        with:
-          path: 03_clases/node_modules
-          key: ${{ runner.os }}-node-${{ hashFiles('03_clases/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
+          node-version: ${{ env.NODE_VERSION }}
+          cache: "npm"
+          cache-dependency-path: ${{ env.WORKING_DIR }}/package-lock.json
 
       - name: Install dependencies
-        run: npm install
+        working-directory: ${{ env.WORKING_DIR }}
+        run: npm ci
 
-      - name: Format check
-        run: npm run format:check
-
-      - name: Lint
+      - name: Run ESLint
+        working-directory: ${{ env.WORKING_DIR }}
         run: npm run lint
+        continue-on-error: false
 
-      - name: Test
-        run: npm run test
+      # Reporte de errores en el resumen del PR
+      - name: Annotate lint errors (si falla)
+        if: failure()
+        run: |
+          echo "### ❌ Lint Falló" >> $GITHUB_STEP_SUMMARY
+          echo "Revisa los errores de ESLint en los logs." >> $GITHUB_STEP_SUMMARY
 
-      - name: Build
+  # ─────────────────────────────────────────────
+  # ✏️ Format: Verificación de estilo de código
+  # ─────────────────────────────────────────────
+  format:
+    name: Format Check
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: "npm"
+          cache-dependency-path: ${{ env.WORKING_DIR }}/package-lock.json
+
+      - name: Install dependencies
+        working-directory: ${{ env.WORKING_DIR }}
+        run: npm ci
+
+      - name: Check formatting with Prettier
+        working-directory: ${{ env.WORKING_DIR }}
+        run: npm run format:check
+        continue-on-error: false
+
+      - name: Annotate format errors (si falla)
+        if: failure()
+        run: |
+          echo "### ❌ Format Check Falló" >> $GITHUB_STEP_SUMMARY
+          echo "Ejecuta \`npm run format\` localmente para corregir el estilo." >> $GITHUB_STEP_SUMMARY
+
+  # ─────────────────────────────────────────────
+  # 🧪 Tests: Pruebas unitarias + cobertura
+  # ─────────────────────────────────────────────
+  test:
+    name: Run Tests
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: "npm"
+          cache-dependency-path: ${{ env.WORKING_DIR }}/package-lock.json
+
+      - name: Install dependencies
+        working-directory: ${{ env.WORKING_DIR }}
+        run: npm ci
+
+      - name: Run tests with coverage
+        working-directory: ${{ env.WORKING_DIR }}
+        run: npm test -- --coverage
+        env:
+          CI: true
+
+      # Subir cobertura a Codecov (no bloquea el pipeline si falla)
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v4
+        with:
+          files: ./${{ env.WORKING_DIR }}/coverage/lcov.info
+          flags: unittests
+          name: codecov-umbrella
+          fail_ci_if_error: false
+
+      # Guardar reporte de cobertura como artefacto descargable
+      - name: Archive coverage report
+        uses: actions/upload-artifact@v4
+        with:
+          name: coverage-report
+          path: ${{ env.WORKING_DIR }}/coverage/
+          retention-days: 14
+
+      # Resumen de cobertura en el PR
+      - name: Coverage summary
+        working-directory: ${{ env.WORKING_DIR }}
+        run: |
+          echo "### 📊 Reporte de Cobertura" >> $GITHUB_STEP_SUMMARY
+          if [ -f coverage/coverage-summary.json ]; then
+            echo '```json' >> $GITHUB_STEP_SUMMARY
+            cat coverage/coverage-summary.json >> $GITHUB_STEP_SUMMARY
+            echo '```' >> $GITHUB_STEP_SUMMARY
+          else
+            echo "No se encontró coverage-summary.json. Revisa la configuración de Jest." >> $GITHUB_STEP_SUMMARY
+          fi
+
+  # ─────────────────────────────────────────────
+  # 🏗️ Build: Compilación del proyecto
+  #    Solo se ejecuta si lint, format y tests pasan
+  # ─────────────────────────────────────────────
+  build:
+    name: Build Project
+    runs-on: ubuntu-latest
+    needs: [lint, format, test]
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: "npm"
+          cache-dependency-path: ${{ env.WORKING_DIR }}/package-lock.json
+
+      - name: Install dependencies
+        working-directory: ${{ env.WORKING_DIR }}
+        run: npm ci
+
+      - name: Build project
+        working-directory: ${{ env.WORKING_DIR }}
         run: npm run build
+        env:
+          CI: true
+
+      # Guardar artefactos del build
+      - name: Archive build artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-artifacts
+          path: ${{ env.WORKING_DIR }}/dist/
+          retention-days: 14
+
+      # Resumen final en el PR
+      - name: Build summary
+        run: |
+          echo "### ✅ Build Exitoso" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "| Paso       | Estado |" >> $GITHUB_STEP_SUMMARY
+          echo "|------------|--------|" >> $GITHUB_STEP_SUMMARY
+          echo "| Lint       | ✅ Pass |" >> $GITHUB_STEP_SUMMARY
+          echo "| Format     | ✅ Pass |" >> $GITHUB_STEP_SUMMARY
+          echo "| Tests      | ✅ Pass |" >> $GITHUB_STEP_SUMMARY
+          echo "| Build      | ✅ Pass |" >> $GITHUB_STEP_SUMMARY
+
+  # ─────────────────────────────────────────────
+  # 🏁 Status Check: Gate final para merges
+  #    Se ejecuta siempre, reporta estado global
+  # ─────────────────────────────────────────────
+  status-check:
+    name: All Checks Passed
+    runs-on: ubuntu-latest
+    needs: [lint, format, test, build]
+    if: always()
+
+    steps:
+      - name: Evaluate pipeline status
+        run: |
+          LINT=${{ needs.lint.result }}
+          FORMAT=${{ needs.format.result }}
+          TEST=${{ needs.test.result }}
+          BUILD=${{ needs.build.result }}
+
+          echo "=== Estado de los Jobs ==="
+          echo "Lint:   $LINT"
+          echo "Format: $FORMAT"
+          echo "Test:   $TEST"
+          echo "Build:  $BUILD"
+          echo ""
+
+          # Resumen en el PR
+          echo "### 📋 Estado del Pipeline" >> $GITHUB_STEP_SUMMARY
+          echo "| Job    | Resultado |" >> $GITHUB_STEP_SUMMARY
+          echo "|--------|-----------|" >> $GITHUB_STEP_SUMMARY
+          echo "| Lint   | $([ "$LINT" = "success" ] && echo '✅' || echo '❌') |" >> $GITHUB_STEP_SUMMARY
+          echo "| Format | $([ "$FORMAT" = "success" ] && echo '✅' || echo '❌') |" >> $GITHUB_STEP_SUMMARY
+          echo "| Test   | $([ "$TEST" = "success" ] && echo '✅' || echo '❌') |" >> $GITHUB_STEP_SUMMARY
+          echo "| Build  | $([ "$BUILD" = "success" ] && echo '✅' || echo '❌') |" >> $GITHUB_STEP_SUMMARY
+
+          # Falla el pipeline si cualquier job no pasó
+          if [ "$LINT" != "success" ] || \
+             [ "$FORMAT" != "success" ] || \
+             [ "$TEST" != "success" ] || \
+             [ "$BUILD" != "success" ]; then
+            echo ""
+            echo "❌ El pipeline falló. Revisa los jobs marcados con error."
+            exit 1
+          fi
+
+          echo "✅ ¡Todos los checks pasaron exitosamente!"
