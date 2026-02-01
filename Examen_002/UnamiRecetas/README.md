@@ -239,10 +239,10 @@ El pipeline se ejecuta automáticamente en cada **push** y **pull request** haci
 
 ### Pull Request Aprobado con comentarios de revisiones
 
+![PR4](docs/images/pr4.png)
 ![PR1](docs/images/pr1.png)
 ![PR2](docs/images/pr2.png)
 ![PR3](docs/images/pr3.png)
-![PR4](docs/images/pr4.png)
 
 ---
 
