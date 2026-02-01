@@ -1,5 +1,5 @@
 const axios = require('axios');
-const traductorService = require('./traductorService');
+const traductorService = require('../traductorService');
 
 /**
  * Cliente para consumir la API de Spoonacular.
