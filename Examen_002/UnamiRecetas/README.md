@@ -237,9 +237,12 @@ El pipeline se ejecuta automáticamente en cada **push** y **pull request** haci
 ![Lint](docs/images/lint.png)
 ![Format](docs/images/format.png)
 
-### Pull Request Aprobado
+### Pull Request Aprobado con comentarios de revisiones
 
-![PR Approved](docs/images/pr-approved.png)
+![PR1](docs/images/pr1.png)
+![PR2](docs/images/pr2.png)
+![PR3](docs/images/pr3.png)
+![PR4](docs/images/pr4.png)
 
 ---
 
