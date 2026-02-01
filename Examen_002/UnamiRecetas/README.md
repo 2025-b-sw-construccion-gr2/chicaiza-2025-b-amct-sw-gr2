@@ -129,15 +129,15 @@ http://localhost:3000
 
 ### 7. Comandos disponibles
 
-| Comando              | Descripción                                    |
-| -------------------- | ---------------------------------------------- |
-| `npm start`          | Inicia la aplicación en modo producción        |
-| `npm run dev`        | Inicia con nodemon (hot reload)                |
-| `npm run lint`       | Ejecuta ESLint para análisis de código         |
-| `npm run format`     | Formatea el código con Prettier                |
-| `npm run format:check` | Verifica el formato sin modificar archivos   |
-| `npm test`           | Ejecuta las pruebas con Jest y genera cobertura |
-| `npm run build`      | Genera el build del proyecto en `/dist`        |
+| Comando                | Descripción                                     |
+| ---------------------- | ----------------------------------------------- |
+| `npm start`            | Inicia la aplicación en modo producción         |
+| `npm run dev`          | Inicia con nodemon (hot reload)                 |
+| `npm run lint`         | Ejecuta ESLint para análisis de código          |
+| `npm run format`       | Formatea el código con Prettier                 |
+| `npm run format:check` | Verifica el formato sin modificar archivos      |
+| `npm test`             | Ejecuta las pruebas con Jest y genera cobertura |
+| `npm run build`        | Genera el build del proyecto en `/dist`         |
 
 ---
 
@@ -175,13 +175,13 @@ El pipeline se ejecuta automáticamente en cada **push** y **pull request** haci
 
 ### Detalle de cada Job
 
-| Job | Herramienta | Descripción |
-|-----|-------------|-------------|
-| **🔍 Lint** | ESLint | Análisis estático del código para detectar errores y malas prácticas |
-| **✏️ Format** | Prettier | Verifica que el código siga el estilo definido en `.prettierrc` |
-| **🧪 Tests** | Jest | Ejecuta pruebas unitarias y genera reporte de cobertura |
-| **🏗️ Build** | npm | Compila el proyecto y genera artefactos en `/dist` |
-| **🏁 Status Check** | - | Verifica que todos los jobs anteriores pasaron exitosamente |
+| Job                 | Herramienta | Descripción                                                          |
+| ------------------- | ----------- | -------------------------------------------------------------------- |
+| **🔍 Lint**         | ESLint      | Análisis estático del código para detectar errores y malas prácticas |
+| **✏️ Format**       | Prettier    | Verifica que el código siga el estilo definido en `.prettierrc`      |
+| **🧪 Tests**        | Jest        | Ejecuta pruebas unitarias y genera reporte de cobertura              |
+| **🏗️ Build**        | npm         | Compila el proyecto y genera artefactos en `/dist`                   |
+| **🏁 Status Check** | -           | Verifica que todos los jobs anteriores pasaron exitosamente          |
 
 ### Características del Pipeline
 
@@ -197,24 +197,25 @@ El pipeline se ejecuta automáticamente en cada **push** y **pull request** haci
 
 ### Estrategia de Ramas
 
-| Rama | Propósito |
-|------|-----------|
-| `main` | Código en producción, estable |
-| `develop` | Rama de integración, contiene el proyecto base |
-| `feature/*` | Ramas para nuevas funcionalidades |
+| Rama        | Propósito                                      |
+| ----------- | ---------------------------------------------- |
+| `main`      | Código en producción, estable                  |
+| `develop`   | Rama de integración, contiene el proyecto base |
+| `feature/*` | Ramas para nuevas funcionalidades              |
 
 ### Revisión de código
-   - Se aprobó el Pull Request antes de fusionar
-   - El pipeline de CI fue exitoso
+
+- Se aprobó el Pull Request antes de fusionar
+- El pipeline de CI fue exitoso
 
 1. **Merge a develop:**
    - Una vez aprobado, se fusiona el PR a `develop`
 
 ### Ramas Creadas
 
-| Rama | Descripción |
-|------|-------------|
-| `develop` | Contiene el proyecto base inicial |
+| Rama                      | Descripción                                              |
+| ------------------------- | -------------------------------------------------------- |
+| `develop`                 | Contiene el proyecto base inicial                        |
 | `feature/add-ci-workflow` | Adición del CI workflow y configuración de linters/tests |
 
 ---
@@ -222,15 +223,17 @@ El pipeline se ejecuta automáticamente en cada **push** y **pull request** haci
 ## 📸 Capturas de Ejecución Exitosa
 
 ### Pipeline de CI en GitHub Actions
+
 ![Jobs Pipeline CI](docs/images/jobsPipelineCI.png)
 ![Pipeline CI](docs/images/pipelineCI.png)
 
-
 ### Ejecución de Tests con Cobertura
+
 ![Test-Coverage](docs/images/testCoverage.png)
 ![Test Coverage HTML](docs/images/test-coverageHTML.png)
 
 ### Lint y Format Check
+
 ![Lint](docs/images/lint.png)
 ![Format](docs/images/format.png)
 
@@ -249,6 +252,7 @@ A continuación se describe el flujo de uso de la aplicación Umami, desde el in
 Al acceder a `http://localhost:3000`, se muestra la página de bienvenida de Umami. Esta página presenta una breve introducción al sistema y un botón para comenzar la búsqueda de recetas.
 
 **Acciones disponibles:**
+
 - Hacer clic en el botón **"Comenzar experiencia"** en la página de inicio o desde la navegación en **"Buscar Recetas"** para ir a la selección de ingredientes
 
 ![Página de Inicio](docs/images/app-inicio.png)
@@ -260,6 +264,7 @@ Al acceder a `http://localhost:3000`, se muestra la página de bienvenida de Uma
 En esta pantalla se muestran todos los ingredientes disponibles, organizados por categorías (verduras, frutas, carnes, lácteos, etc.). El usuario puede seleccionar los ingredientes que tiene disponibles en casa.
 
 **Acciones disponibles:**
+
 - Marcar los ingredientes disponibles haciendo clic en cada uno
 - Los ingredientes seleccionados se resaltan visualmente
 - Una vez seleccionados los ingredientes deseados, hacer clic en el botón **"Buscar Recetas"**
@@ -273,6 +278,7 @@ En esta pantalla se muestran todos los ingredientes disponibles, organizados por
 Después de seleccionar los ingredientes y hacer clic en buscar, el sistema consulta la API de Spoonacular para encontrar recetas que coincidan con los ingredientes seleccionados. Los resultados se muestran traducidos al español gracias al servicio de traducción.
 
 **Información mostrada:**
+
 - Imagen de la receta
 - Nombre de la receta (traducido al español)
 - Porcentaje de coincidencia con los ingredientes seleccionados
@@ -280,6 +286,7 @@ Después de seleccionar los ingredientes y hacer clic en buscar, el sistema cons
 - Tiempo de preparación
 
 **Acciones disponibles:**
+
 - Hacer clic en una receta para ver su detalle completo
 - Volver a la selección de ingredientes para modificar la búsqueda
 
@@ -292,6 +299,7 @@ Después de seleccionar los ingredientes y hacer clic en buscar, el sistema cons
 Al seleccionar una receta, se muestra una vista detallada con toda la información necesaria para prepararla.
 
 **Información mostrada:**
+
 - Imagen ampliada de la receta
 - Nombre completo de la receta
 - Tiempo de preparación y número de porciones
@@ -301,6 +309,7 @@ Al seleccionar una receta, se muestra una vista detallada con toda la informaci�
 - Información nutricional (si está disponible)
 
 **Acciones disponibles:**
+
 - Volver a la lista de recetas
 - Iniciar una nueva búsqueda
 
