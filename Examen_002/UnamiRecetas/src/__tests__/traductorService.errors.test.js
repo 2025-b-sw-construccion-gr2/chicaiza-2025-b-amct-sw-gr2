@@ -70,9 +70,15 @@ describe('traductorService - error and long text cases', () => {
     const texto = `${longPart},part2,part3.`; // termina con punto para la separación de oraciones
 
     axios.get
-      .mockImplementationOnce(() => Promise.resolve({ data: { responseData: { translatedText: 'P1' } } }))
-      .mockImplementationOnce(() => Promise.resolve({ data: { responseData: { translatedText: 'P2' } } }))
-      .mockImplementationOnce(() => Promise.resolve({ data: { responseData: { translatedText: 'P3' } } }));
+      .mockImplementationOnce(() =>
+        Promise.resolve({ data: { responseData: { translatedText: 'P1' } } }),
+      )
+      .mockImplementationOnce(() =>
+        Promise.resolve({ data: { responseData: { translatedText: 'P2' } } }),
+      )
+      .mockImplementationOnce(() =>
+        Promise.resolve({ data: { responseData: { translatedText: 'P3' } } }),
+      );
 
     const res = await traductorService.traducir(texto);
 
@@ -185,7 +191,9 @@ describe('traductorService - error and long text cases', () => {
   });
 
   test('traducirFragmento cae a buscarTraduccionParcial cuando la API devuelve QUERY LENGTH LIMIT EXCEEDED', async () => {
-    axios.get.mockResolvedValue({ data: { responseData: { translatedText: 'QUERY LENGTH LIMIT EXCEEDED' } } });
+    axios.get.mockResolvedValue({
+      data: { responseData: { translatedText: 'QUERY LENGTH LIMIT EXCEEDED' } },
+    });
 
     const res = await traductorService.traducirFragmento('This has chicken');
     expect(res).toBe('This has pollo');

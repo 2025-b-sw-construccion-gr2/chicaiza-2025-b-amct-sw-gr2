@@ -1,7 +1,803 @@
-{"C:\\Users\\andre\\Documents\\Construccion\\chicaiza-2025-b-amct-sw-gr2\\Examen_002\\UnamiRecetas\\src\\ingredienteService.js": {"path":"C:\\Users\\andre\\Documents\\Construccion\\chicaiza-2025-b-amct-sw-gr2\\Examen_002\\UnamiRecetas\\src\\ingredienteService.js","statementMap":{"0":{"start":{"line":1,"column":0},"end":{"line":1,"column":58}}},"fnMap":{},"branchMap":{},"s":{"0":1},"f":{},"b":{},"_coverageSchema":"1a1c01bbd47fc00a2c39e90264f33305004495a9","hash":"b5becb8b2f87e0cbbdf9188ba2b0979e0534b643"}
-,"C:\\Users\\andre\\Documents\\Construccion\\chicaiza-2025-b-amct-sw-gr2\\Examen_002\\UnamiRecetas\\src\\spoonacularClient.js": {"path":"C:\\Users\\andre\\Documents\\Construccion\\chicaiza-2025-b-amct-sw-gr2\\Examen_002\\UnamiRecetas\\src\\spoonacularClient.js","statementMap":{"0":{"start":{"line":1,"column":0},"end":{"line":1,"column":57}}},"fnMap":{},"branchMap":{},"s":{"0":1},"f":{},"b":{},"_coverageSchema":"1a1c01bbd47fc00a2c39e90264f33305004495a9","hash":"b6ef35534b3a91b78153c66c20a6fb5318469c4f"}
-,"C:\\Users\\andre\\Documents\\Construccion\\chicaiza-2025-b-amct-sw-gr2\\Examen_002\\UnamiRecetas\\src\\traductorService.js": {"path":"C:\\Users\\andre\\Documents\\Construccion\\chicaiza-2025-b-amct-sw-gr2\\Examen_002\\UnamiRecetas\\src\\traductorService.js","statementMap":{"0":{"start":{"line":1,"column":0},"end":{"line":1,"column":56}}},"fnMap":{},"branchMap":{},"s":{"0":1},"f":{},"b":{},"_coverageSchema":"1a1c01bbd47fc00a2c39e90264f33305004495a9","hash":"c34a3e1c349d8d974f8ec42a9c2362368f8f610a"}
-,"C:\\Users\\andre\\Documents\\Construccion\\chicaiza-2025-b-amct-sw-gr2\\Examen_002\\UnamiRecetas\\src\\services\\ingredienteService.js": {"path":"C:\\Users\\andre\\Documents\\Construccion\\chicaiza-2025-b-amct-sw-gr2\\Examen_002\\UnamiRecetas\\src\\services\\ingredienteService.js","statementMap":{"0":{"start":{"line":1,"column":35},"end":{"line":1,"column":55}},"1":{"start":{"line":12,"column":2},"end":{"line":26,"column":3}},"2":{"start":{"line":13,"column":25},"end":{"line":21,"column":6}},"3":{"start":{"line":22,"column":4},"end":{"line":22,"column":24}},"4":{"start":{"line":24,"column":4},"end":{"line":24,"column":67}},"5":{"start":{"line":25,"column":4},"end":{"line":25,"column":14}},"6":{"start":{"line":34,"column":2},"end":{"line":60,"column":3}},"7":{"start":{"line":35,"column":23},"end":{"line":46,"column":6}},"8":{"start":{"line":49,"column":17},"end":{"line":49,"column":26}},"9":{"start":{"line":50,"column":4},"end":{"line":54,"column":5}},"10":{"start":{"line":51,"column":6},"end":{"line":53,"column":7}},"11":{"start":{"line":52,"column":8},"end":{"line":52,"column":52}},"12":{"start":{"line":56,"column":4},"end":{"line":56,"column":16}},"13":{"start":{"line":58,"column":4},"end":{"line":58,"column":81}},"14":{"start":{"line":59,"column":4},"end":{"line":59,"column":21}},"15":{"start":{"line":69,"column":2},"end":{"line":71,"column":3}},"16":{"start":{"line":70,"column":4},"end":{"line":70,"column":14}},"17":{"start":{"line":73,"column":2},"end":{"line":89,"column":3}},"18":{"start":{"line":74,"column":25},"end":{"line":84,"column":6}},"19":{"start":{"line":85,"column":4},"end":{"line":85,"column":24}},"20":{"start":{"line":87,"column":4},"end":{"line":87,"column":75}},"21":{"start":{"line":88,"column":4},"end":{"line":88,"column":14}},"22":{"start":{"line":98,"column":2},"end":{"line":111,"column":3}},"23":{"start":{"line":99,"column":24},"end":{"line":106,"column":6}},"24":{"start":{"line":107,"column":4},"end":{"line":107,"column":23}},"25":{"start":{"line":109,"column":4},"end":{"line":109,"column":66}},"26":{"start":{"line":110,"column":4},"end":{"line":110,"column":16}},"27":{"start":{"line":114,"column":0},"end":{"line":119,"column":2}}},"fnMap":{"0":{"name":"obtenerTodosLosIngredientes","decl":{"start":{"line":11,"column":15},"end":{"line":11,"column":42}},"loc":{"start":{"line":11,"column":45},"end":{"line":27,"column":1}},"line":11},"1":{"name":"obtenerIngredientesAgrupadosPorCategoria","decl":{"start":{"line":33,"column":15},"end":{"line":33,"column":55}},"loc":{"start":{"line":33,"column":58},"end":{"line":61,"column":1}},"line":33},"2":{"name":"obtenerIngredientesPorIds","decl":{"start":{"line":68,"column":15},"end":{"line":68,"column":40}},"loc":{"start":{"line":68,"column":46},"end":{"line":90,"column":1}},"line":68},"3":{"name":"obtenerIngredientePorId","decl":{"start":{"line":97,"column":15},"end":{"line":97,"column":38}},"loc":{"start":{"line":97,"column":43},"end":{"line":112,"column":1}},"line":97}},"branchMap":{"0":{"loc":{"start":{"line":51,"column":6},"end":{"line":53,"column":7}},"type":"if","locations":[{"start":{"line":51,"column":6},"end":{"line":53,"column":7}},{"start":{},"end":{}}],"line":51},"1":{"loc":{"start":{"line":51,"column":10},"end":{"line":51,"column":69}},"type":"binary-expr","locations":[{"start":{"line":51,"column":10},"end":{"line":51,"column":32}},{"start":{"line":51,"column":36},"end":{"line":51,"column":69}}],"line":51},"2":{"loc":{"start":{"line":69,"column":2},"end":{"line":71,"column":3}},"type":"if","locations":[{"start":{"line":69,"column":2},"end":{"line":71,"column":3}},{"start":{},"end":{}}],"line":69},"3":{"loc":{"start":{"line":69,"column":6},"end":{"line":69,"column":30}},"type":"binary-expr","locations":[{"start":{"line":69,"column":6},"end":{"line":69,"column":10}},{"start":{"line":69,"column":14},"end":{"line":69,"column":30}}],"line":69}},"s":{"0":1,"1":1,"2":1,"3":1,"4":0,"5":0,"6":1,"7":1,"8":1,"9":1,"10":1,"11":1,"12":1,"13":0,"14":0,"15":1,"16":1,"17":0,"18":0,"19":0,"20":0,"21":0,"22":1,"23":1,"24":1,"25":0,"26":0,"27":1},"f":{"0":1,"1":1,"2":1,"3":1},"b":{"0":[1,0],"1":[1,1],"2":[1,0],"3":[1,1]},"_coverageSchema":"1a1c01bbd47fc00a2c39e90264f33305004495a9","hash":"a624d22524c9f430b3ad9fa862a5aa691ab75fcd"}
-,"C:\\Users\\andre\\Documents\\Construccion\\chicaiza-2025-b-amct-sw-gr2\\Examen_002\\UnamiRecetas\\src\\services\\spoonacularClient.js": {"path":"C:\\Users\\andre\\Documents\\Construccion\\chicaiza-2025-b-amct-sw-gr2\\Examen_002\\UnamiRecetas\\src\\services\\spoonacularClient.js","statementMap":{"0":{"start":{"line":1,"column":14},"end":{"line":1,"column":30}},"1":{"start":{"line":2,"column":25},"end":{"line":2,"column":55}},"2":{"start":{"line":8,"column":17},"end":{"line":8,"column":82}},"3":{"start":{"line":9,"column":16},"end":{"line":9,"column":53}},"4":{"start":{"line":12,"column":27},"end":{"line":60,"column":1}},"5":{"start":{"line":68,"column":22},"end":{"line":68,"column":61}},"6":{"start":{"line":69,"column":2},"end":{"line":69,"column":63}},"7":{"start":{"line":78,"column":2},"end":{"line":120,"column":3}},"8":{"start":{"line":79,"column":16},"end":{"line":79,"column":61}},"9":{"start":{"line":81,"column":21},"end":{"line":84,"column":6}},"10":{"start":{"line":86,"column":19},"end":{"line":86,"column":32}},"11":{"start":{"line":89,"column":4},"end":{"line":89,"column":79}},"12":{"start":{"line":91,"column":4},"end":{"line":98,"column":5}},"13":{"start":{"line":93,"column":26},"end":{"line":96,"column":15}},"14":{"start":{"line":97,"column":6},"end":{"line":97,"column":70}},"15":{"start":{"line":100,"column":4},"end":{"line":106,"column":5}},"16":{"start":{"line":101,"column":26},"end":{"line":104,"column":15}},"17":{"start":{"line":105,"column":6},"end":{"line":105,"column":75}},"18":{"start":{"line":109,"column":4},"end":{"line":114,"column":5}},"19":{"start":{"line":110,"column":6},"end":{"line":113,"column":7}},"20":{"start":{"line":111,"column":8},"end":{"line":111,"column":74}},"21":{"start":{"line":112,"column":8},"end":{"line":112,"column":93}},"22":{"start":{"line":116,"column":4},"end":{"line":116,"column":18}},"23":{"start":{"line":118,"column":4},"end":{"line":118,"column":72}},"24":{"start":{"line":119,"column":4},"end":{"line":119,"column":16}},"25":{"start":{"line":130,"column":2},"end":{"line":132,"column":3}},"26":{"start":{"line":131,"column":4},"end":{"line":131,"column":14}},"27":{"start":{"line":134,"column":2},"end":{"line":174,"column":3}},"28":{"start":{"line":135,"column":30},"end":{"line":135,"column":52}},"29":{"start":{"line":136,"column":16},"end":{"line":136,"column":55}},"30":{"start":{"line":138,"column":21},"end":{"line":147,"column":6}},"31":{"start":{"line":149,"column":20},"end":{"line":149,"column":33}},"32":{"start":{"line":152,"column":4},"end":{"line":168,"column":5}},"33":{"start":{"line":153,"column":6},"end":{"line":153,"column":81}},"34":{"start":{"line":155,"column":6},"end":{"line":160,"column":7}},"35":{"start":{"line":156,"column":8},"end":{"line":159,"column":9}},"36":{"start":{"line":157,"column":10},"end":{"line":157,"column":76}},"37":{"start":{"line":158,"column":10},"end":{"line":158,"column":95}},"38":{"start":{"line":162,"column":6},"end":{"line":167,"column":7}},"39":{"start":{"line":163,"column":8},"end":{"line":166,"column":9}},"40":{"start":{"line":164,"column":10},"end":{"line":164,"column":76}},"41":{"start":{"line":165,"column":10},"end":{"line":165,"column":95}},"42":{"start":{"line":170,"column":4},"end":{"line":170,"column":19}},"43":{"start":{"line":172,"column":4},"end":{"line":172,"column":61}},"44":{"start":{"line":173,"column":4},"end":{"line":173,"column":14}},"45":{"start":{"line":177,"column":0},"end":{"line":181,"column":2}}},"fnMap":{"0":{"name":"traducirIngredienteAIngles","decl":{"start":{"line":67,"column":9},"end":{"line":67,"column":35}},"loc":{"start":{"line":67,"column":56},"end":{"line":70,"column":1}},"line":67},"1":{"name":"obtenerDetalleReceta","decl":{"start":{"line":77,"column":15},"end":{"line":77,"column":35}},"loc":{"start":{"line":77,"column":46},"end":{"line":121,"column":1}},"line":77},"2":{"name":"buscarRecetasPorIngredientes","decl":{"start":{"line":129,"column":15},"end":{"line":129,"column":43}},"loc":{"start":{"line":129,"column":71},"end":{"line":175,"column":1}},"line":129}},"branchMap":{"0":{"loc":{"start":{"line":8,"column":17},"end":{"line":8,"column":82}},"type":"binary-expr","locations":[{"start":{"line":8,"column":17},"end":{"line":8,"column":49}},{"start":{"line":8,"column":53},"end":{"line":8,"column":82}}],"line":8},"1":{"loc":{"start":{"line":9,"column":16},"end":{"line":9,"column":53}},"type":"binary-expr","locations":[{"start":{"line":9,"column":16},"end":{"line":9,"column":47}},{"start":{"line":9,"column":51},"end":{"line":9,"column":53}}],"line":9},"2":{"loc":{"start":{"line":69,"column":9},"end":{"line":69,"column":62}},"type":"binary-expr","locations":[{"start":{"line":69,"column":9},"end":{"line":69,"column":40}},{"start":{"line":69,"column":44},"end":{"line":69,"column":62}}],"line":69},"3":{"loc":{"start":{"line":91,"column":4},"end":{"line":98,"column":5}},"type":"if","locations":[{"start":{"line":91,"column":4},"end":{"line":98,"column":5}},{"start":{},"end":{}}],"line":91},"4":{"loc":{"start":{"line":100,"column":4},"end":{"line":106,"column":5}},"type":"if","locations":[{"start":{"line":100,"column":4},"end":{"line":106,"column":5}},{"start":{},"end":{}}],"line":100},"5":{"loc":{"start":{"line":109,"column":4},"end":{"line":114,"column":5}},"type":"if","locations":[{"start":{"line":109,"column":4},"end":{"line":114,"column":5}},{"start":{},"end":{}}],"line":109},"6":{"loc":{"start":{"line":129,"column":58},"end":{"line":129,"column":69}},"type":"default-arg","locations":[{"start":{"line":129,"column":67},"end":{"line":129,"column":69}}],"line":129},"7":{"loc":{"start":{"line":130,"column":2},"end":{"line":132,"column":3}},"type":"if","locations":[{"start":{"line":130,"column":2},"end":{"line":132,"column":3}},{"start":{},"end":{}}],"line":130},"8":{"loc":{"start":{"line":130,"column":6},"end":{"line":130,"column":48}},"type":"binary-expr","locations":[{"start":{"line":130,"column":6},"end":{"line":130,"column":19}},{"start":{"line":130,"column":23},"end":{"line":130,"column":48}}],"line":130},"9":{"loc":{"start":{"line":155,"column":6},"end":{"line":160,"column":7}},"type":"if","locations":[{"start":{"line":155,"column":6},"end":{"line":160,"column":7}},{"start":{},"end":{}}],"line":155},"10":{"loc":{"start":{"line":162,"column":6},"end":{"line":167,"column":7}},"type":"if","locations":[{"start":{"line":162,"column":6},"end":{"line":167,"column":7}},{"start":{},"end":{}}],"line":162}},"s":{"0":1,"1":1,"2":1,"3":1,"4":1,"5":2,"6":2,"7":1,"8":1,"9":1,"10":1,"11":1,"12":1,"13":1,"14":1,"15":1,"16":1,"17":1,"18":1,"19":1,"20":1,"21":1,"22":1,"23":0,"24":0,"25":1,"26":0,"27":1,"28":1,"29":1,"30":1,"31":1,"32":1,"33":1,"34":1,"35":1,"36":1,"37":1,"38":1,"39":1,"40":1,"41":1,"42":1,"43":0,"44":0,"45":1},"f":{"0":2,"1":1,"2":1},"b":{"0":[1,1],"1":[1,1],"2":[2,1],"3":[1,0],"4":[1,0],"5":[1,0],"6":[0],"7":[0,1],"8":[1,1],"9":[1,0],"10":[1,0]},"_coverageSchema":"1a1c01bbd47fc00a2c39e90264f33305004495a9","hash":"0f45c2b2696db47c2e3a1231b3ae6e01f447cbe5"}
-,"C:\\Users\\andre\\Documents\\Construccion\\chicaiza-2025-b-amct-sw-gr2\\Examen_002\\UnamiRecetas\\src\\services\\traductorService.js": {"path":"C:\\Users\\andre\\Documents\\Construccion\\chicaiza-2025-b-amct-sw-gr2\\Examen_002\\UnamiRecetas\\src\\services\\traductorService.js","statementMap":{"0":{"start":{"line":1,"column":14},"end":{"line":1,"column":30}},"1":{"start":{"line":9,"column":21},"end":{"line":9,"column":62}},"2":{"start":{"line":10,"column":25},"end":{"line":10,"column":28}},"3":{"start":{"line":13,"column":14},"end":{"line":13,"column":23}},"4":{"start":{"line":16,"column":30},"end":{"line":75,"column":1}},"5":{"start":{"line":83,"column":2},"end":{"line":85,"column":3}},"6":{"start":{"line":84,"column":4},"end":{"line":84,"column":17}},"7":{"start":{"line":87,"column":22},"end":{"line":87,"column":34}},"8":{"start":{"line":88,"column":19},"end":{"line":88,"column":44}},"9":{"start":{"line":91,"column":2},"end":{"line":93,"column":3}},"10":{"start":{"line":92,"column":4},"end":{"line":92,"column":31}},"11":{"start":{"line":96,"column":2},"end":{"line":100,"column":3}},"12":{"start":{"line":97,"column":23},"end":{"line":97,"column":54}},"13":{"start":{"line":98,"column":4},"end":{"line":98,"column":36}},"14":{"start":{"line":99,"column":4},"end":{"line":99,"column":22}},"15":{"start":{"line":102,"column":2},"end":{"line":126,"column":3}},"16":{"start":{"line":103,"column":21},"end":{"line":109,"column":6}},"17":{"start":{"line":111,"column":4},"end":{"line":123,"column":5}},"18":{"start":{"line":112,"column":25},"end":{"line":112,"column":66}},"19":{"start":{"line":115,"column":6},"end":{"line":122,"column":7}},"20":{"start":{"line":120,"column":8},"end":{"line":120,"column":40}},"21":{"start":{"line":121,"column":8},"end":{"line":121,"column":26}},"22":{"start":{"line":125,"column":4},"end":{"line":125,"column":66}},"23":{"start":{"line":129,"column":2},"end":{"line":129,"column":40}},"24":{"start":{"line":136,"column":21},"end":{"line":136,"column":40}},"25":{"start":{"line":138,"column":2},"end":{"line":143,"column":3}},"26":{"start":{"line":139,"column":4},"end":{"line":142,"column":5}},"27":{"start":{"line":140,"column":24},"end":{"line":140,"column":59}},"28":{"start":{"line":141,"column":6},"end":{"line":141,"column":68}},"29":{"start":{"line":145,"column":2},"end":{"line":145,"column":15}},"30":{"start":{"line":152,"column":20},"end":{"line":152,"column":48}},"31":{"start":{"line":153,"column":21},"end":{"line":153,"column":23}},"32":{"start":{"line":154,"column":24},"end":{"line":154,"column":26}},"33":{"start":{"line":156,"column":2},"end":{"line":173,"column":3}},"34":{"start":{"line":157,"column":4},"end":{"line":172,"column":5}},"35":{"start":{"line":158,"column":6},"end":{"line":161,"column":7}},"36":{"start":{"line":159,"column":8},"end":{"line":159,"column":73}},"37":{"start":{"line":160,"column":8},"end":{"line":160,"column":29}},"38":{"start":{"line":163,"column":21},"end":{"line":163,"column":42}},"39":{"start":{"line":164,"column":6},"end":{"line":166,"column":7}},"40":{"start":{"line":165,"column":8},"end":{"line":165,"column":63}},"41":{"start":{"line":167,"column":11},"end":{"line":172,"column":5}},"42":{"start":{"line":168,"column":6},"end":{"line":168,"column":71}},"43":{"start":{"line":169,"column":6},"end":{"line":169,"column":32}},"44":{"start":{"line":171,"column":6},"end":{"line":171,"column":64}},"45":{"start":{"line":175,"column":2},"end":{"line":177,"column":3}},"46":{"start":{"line":176,"column":4},"end":{"line":176,"column":69}},"47":{"start":{"line":179,"column":2},"end":{"line":179,"column":37}},"48":{"start":{"line":188,"column":2},"end":{"line":190,"column":3}},"49":{"start":{"line":189,"column":4},"end":{"line":189,"column":17}},"50":{"start":{"line":192,"column":22},"end":{"line":192,"column":34}},"51":{"start":{"line":194,"column":2},"end":{"line":196,"column":3}},"52":{"start":{"line":195,"column":4},"end":{"line":195,"column":43}},"53":{"start":{"line":198,"column":2},"end":{"line":198,"column":40}},"54":{"start":{"line":205,"column":2},"end":{"line":205,"column":51}},"55":{"start":{"line":205,"column":26},"end":{"line":205,"column":51}},"56":{"start":{"line":206,"column":2},"end":{"line":206,"column":37}},"57":{"start":{"line":213,"column":2},"end":{"line":213,"column":39}},"58":{"start":{"line":213,"column":20},"end":{"line":213,"column":39}},"59":{"start":{"line":214,"column":2},"end":{"line":214,"column":31}},"60":{"start":{"line":221,"column":2},"end":{"line":221,"column":29}},"61":{"start":{"line":221,"column":15},"end":{"line":221,"column":29}},"62":{"start":{"line":222,"column":2},"end":{"line":222,"column":26}},"63":{"start":{"line":229,"column":2},"end":{"line":229,"column":16}},"64":{"start":{"line":232,"column":0},"end":{"line":239,"column":2}}},"fnMap":{"0":{"name":"traducirFragmento","decl":{"start":{"line":82,"column":15},"end":{"line":82,"column":32}},"loc":{"start":{"line":82,"column":40},"end":{"line":130,"column":1}},"line":82},"1":{"name":"buscarTraduccionParcial","decl":{"start":{"line":135,"column":9},"end":{"line":135,"column":32}},"loc":{"start":{"line":135,"column":40},"end":{"line":146,"column":1}},"line":135},"2":{"name":"traducirTextoLargo","decl":{"start":{"line":151,"column":15},"end":{"line":151,"column":33}},"loc":{"start":{"line":151,"column":41},"end":{"line":180,"column":1}},"line":151},"3":{"name":"traducir","decl":{"start":{"line":187,"column":15},"end":{"line":187,"column":23}},"loc":{"start":{"line":187,"column":31},"end":{"line":199,"column":1}},"line":187},"4":{"name":"traducirIngrediente","decl":{"start":{"line":204,"column":15},"end":{"line":204,"column":34}},"loc":{"start":{"line":204,"column":54},"end":{"line":207,"column":1}},"line":204},"5":{"name":"traducirDescripcionIngrediente","decl":{"start":{"line":212,"column":15},"end":{"line":212,"column":45}},"loc":{"start":{"line":212,"column":59},"end":{"line":215,"column":1}},"line":212},"6":{"name":"traducirTituloReceta","decl":{"start":{"line":220,"column":15},"end":{"line":220,"column":35}},"loc":{"start":{"line":220,"column":44},"end":{"line":223,"column":1}},"line":220},"7":{"name":"limpiarCache","decl":{"start":{"line":228,"column":9},"end":{"line":228,"column":21}},"loc":{"start":{"line":228,"column":24},"end":{"line":230,"column":1}},"line":228}},"branchMap":{"0":{"loc":{"start":{"line":83,"column":2},"end":{"line":85,"column":3}},"type":"if","locations":[{"start":{"line":83,"column":2},"end":{"line":85,"column":3}},{"start":{},"end":{}}],"line":83},"1":{"loc":{"start":{"line":83,"column":6},"end":{"line":83,"column":35}},"type":"binary-expr","locations":[{"start":{"line":83,"column":6},"end":{"line":83,"column":12}},{"start":{"line":83,"column":16},"end":{"line":83,"column":35}}],"line":83},"2":{"loc":{"start":{"line":91,"column":2},"end":{"line":93,"column":3}},"type":"if","locations":[{"start":{"line":91,"column":2},"end":{"line":93,"column":3}},{"start":{},"end":{}}],"line":91},"3":{"loc":{"start":{"line":96,"column":2},"end":{"line":100,"column":3}},"type":"if","locations":[{"start":{"line":96,"column":2},"end":{"line":100,"column":3}},{"start":{},"end":{}}],"line":96},"4":{"loc":{"start":{"line":111,"column":4},"end":{"line":123,"column":5}},"type":"if","locations":[{"start":{"line":111,"column":4},"end":{"line":123,"column":5}},{"start":{},"end":{}}],"line":111},"5":{"loc":{"start":{"line":111,"column":8},"end":{"line":111,"column":96}},"type":"binary-expr","locations":[{"start":{"line":111,"column":8},"end":{"line":111,"column":21}},{"start":{"line":111,"column":25},"end":{"line":111,"column":51}},{"start":{"line":111,"column":55},"end":{"line":111,"column":96}}],"line":111},"6":{"loc":{"start":{"line":115,"column":6},"end":{"line":122,"column":7}},"type":"if","locations":[{"start":{"line":115,"column":6},"end":{"line":122,"column":7}},{"start":{},"end":{}}],"line":115},"7":{"loc":{"start":{"line":116,"column":8},"end":{"line":118,"column":48}},"type":"binary-expr","locations":[{"start":{"line":116,"column":8},"end":{"line":116,"column":18}},{"start":{"line":117,"column":8},"end":{"line":117,"column":59}},{"start":{"line":118,"column":8},"end":{"line":118,"column":48}}],"line":116},"8":{"loc":{"start":{"line":139,"column":4},"end":{"line":142,"column":5}},"type":"if","locations":[{"start":{"line":139,"column":4},"end":{"line":142,"column":5}},{"start":{},"end":{}}],"line":139},"9":{"loc":{"start":{"line":157,"column":4},"end":{"line":172,"column":5}},"type":"if","locations":[{"start":{"line":157,"column":4},"end":{"line":172,"column":5}},{"start":{"line":167,"column":11},"end":{"line":172,"column":5}}],"line":157},"10":{"loc":{"start":{"line":158,"column":6},"end":{"line":161,"column":7}},"type":"if","locations":[{"start":{"line":158,"column":6},"end":{"line":161,"column":7}},{"start":{},"end":{}}],"line":158},"11":{"loc":{"start":{"line":167,"column":11},"end":{"line":172,"column":5}},"type":"if","locations":[{"start":{"line":167,"column":11},"end":{"line":172,"column":5}},{"start":{"line":170,"column":11},"end":{"line":172,"column":5}}],"line":167},"12":{"loc":{"start":{"line":171,"column":26},"end":{"line":171,"column":52}},"type":"cond-expr","locations":[{"start":{"line":171,"column":44},"end":{"line":171,"column":47}},{"start":{"line":171,"column":50},"end":{"line":171,"column":52}}],"line":171},"13":{"loc":{"start":{"line":175,"column":2},"end":{"line":177,"column":3}},"type":"if","locations":[{"start":{"line":175,"column":2},"end":{"line":177,"column":3}},{"start":{},"end":{}}],"line":175},"14":{"loc":{"start":{"line":188,"column":2},"end":{"line":190,"column":3}},"type":"if","locations":[{"start":{"line":188,"column":2},"end":{"line":190,"column":3}},{"start":{},"end":{}}],"line":188},"15":{"loc":{"start":{"line":188,"column":6},"end":{"line":188,"column":35}},"type":"binary-expr","locations":[{"start":{"line":188,"column":6},"end":{"line":188,"column":12}},{"start":{"line":188,"column":16},"end":{"line":188,"column":35}}],"line":188},"16":{"loc":{"start":{"line":194,"column":2},"end":{"line":196,"column":3}},"type":"if","locations":[{"start":{"line":194,"column":2},"end":{"line":196,"column":3}},{"start":{},"end":{}}],"line":194},"17":{"loc":{"start":{"line":205,"column":2},"end":{"line":205,"column":51}},"type":"if","locations":[{"start":{"line":205,"column":2},"end":{"line":205,"column":51}},{"start":{},"end":{}}],"line":205},"18":{"loc":{"start":{"line":213,"column":2},"end":{"line":213,"column":39}},"type":"if","locations":[{"start":{"line":213,"column":2},"end":{"line":213,"column":39}},{"start":{},"end":{}}],"line":213},"19":{"loc":{"start":{"line":221,"column":2},"end":{"line":221,"column":29}},"type":"if","locations":[{"start":{"line":221,"column":2},"end":{"line":221,"column":29}},{"start":{},"end":{}}],"line":221}},"s":{"0":1,"1":1,"2":1,"3":1,"4":1,"5":2,"6":0,"7":2,"8":2,"9":2,"10":0,"11":2,"12":1,"13":1,"14":1,"15":1,"16":1,"17":1,"18":1,"19":1,"20":1,"21":1,"22":0,"23":0,"24":0,"25":0,"26":0,"27":0,"28":0,"29":0,"30":0,"31":0,"32":0,"33":0,"34":0,"35":0,"36":0,"37":0,"38":0,"39":0,"40":0,"41":0,"42":0,"43":0,"44":0,"45":0,"46":0,"47":0,"48":4,"49":2,"50":2,"51":2,"52":0,"53":2,"54":0,"55":0,"56":0,"57":0,"58":0,"59":0,"60":0,"61":0,"62":0,"63":3,"64":1},"f":{"0":2,"1":0,"2":0,"3":4,"4":0,"5":0,"6":0,"7":3},"b":{"0":[0,2],"1":[2,2],"2":[0,2],"3":[1,1],"4":[1,0],"5":[1,1,1],"6":[1,0],"7":[1,1,1],"8":[0,0],"9":[0,0],"10":[0,0],"11":[0,0],"12":[0,0],"13":[0,0],"14":[2,2],"15":[4,2],"16":[0,2],"17":[0,0],"18":[0,0],"19":[0,0]},"_coverageSchema":"1a1c01bbd47fc00a2c39e90264f33305004495a9","hash":"4206ae72a92535033ad4c69183f67e8acd3c92e8"}
+{
+  "C:\\Users\\andre\\Documents\\Construccion\\chicaiza-2025-b-amct-sw-gr2\\Examen_002\\UnamiRecetas\\src\\ingredienteService.js": {
+    "path": "C:\\Users\\andre\\Documents\\Construccion\\chicaiza-2025-b-amct-sw-gr2\\Examen_002\\UnamiRecetas\\src\\ingredienteService.js",
+    "statementMap": {
+      "0": { "start": { "line": 1, "column": 0 }, "end": { "line": 1, "column": 58 } }
+    },
+    "fnMap": {},
+    "branchMap": {},
+    "s": { "0": 1 },
+    "f": {},
+    "b": {},
+    "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    "hash": "b5becb8b2f87e0cbbdf9188ba2b0979e0534b643"
+  },
+  "C:\\Users\\andre\\Documents\\Construccion\\chicaiza-2025-b-amct-sw-gr2\\Examen_002\\UnamiRecetas\\src\\spoonacularClient.js": {
+    "path": "C:\\Users\\andre\\Documents\\Construccion\\chicaiza-2025-b-amct-sw-gr2\\Examen_002\\UnamiRecetas\\src\\spoonacularClient.js",
+    "statementMap": {
+      "0": { "start": { "line": 1, "column": 0 }, "end": { "line": 1, "column": 57 } }
+    },
+    "fnMap": {},
+    "branchMap": {},
+    "s": { "0": 1 },
+    "f": {},
+    "b": {},
+    "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    "hash": "b6ef35534b3a91b78153c66c20a6fb5318469c4f"
+  },
+  "C:\\Users\\andre\\Documents\\Construccion\\chicaiza-2025-b-amct-sw-gr2\\Examen_002\\UnamiRecetas\\src\\traductorService.js": {
+    "path": "C:\\Users\\andre\\Documents\\Construccion\\chicaiza-2025-b-amct-sw-gr2\\Examen_002\\UnamiRecetas\\src\\traductorService.js",
+    "statementMap": {
+      "0": { "start": { "line": 1, "column": 0 }, "end": { "line": 1, "column": 56 } }
+    },
+    "fnMap": {},
+    "branchMap": {},
+    "s": { "0": 1 },
+    "f": {},
+    "b": {},
+    "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    "hash": "c34a3e1c349d8d974f8ec42a9c2362368f8f610a"
+  },
+  "C:\\Users\\andre\\Documents\\Construccion\\chicaiza-2025-b-amct-sw-gr2\\Examen_002\\UnamiRecetas\\src\\services\\ingredienteService.js": {
+    "path": "C:\\Users\\andre\\Documents\\Construccion\\chicaiza-2025-b-amct-sw-gr2\\Examen_002\\UnamiRecetas\\src\\services\\ingredienteService.js",
+    "statementMap": {
+      "0": { "start": { "line": 1, "column": 35 }, "end": { "line": 1, "column": 55 } },
+      "1": { "start": { "line": 12, "column": 2 }, "end": { "line": 26, "column": 3 } },
+      "2": { "start": { "line": 13, "column": 25 }, "end": { "line": 21, "column": 6 } },
+      "3": { "start": { "line": 22, "column": 4 }, "end": { "line": 22, "column": 24 } },
+      "4": { "start": { "line": 24, "column": 4 }, "end": { "line": 24, "column": 67 } },
+      "5": { "start": { "line": 25, "column": 4 }, "end": { "line": 25, "column": 14 } },
+      "6": { "start": { "line": 34, "column": 2 }, "end": { "line": 60, "column": 3 } },
+      "7": { "start": { "line": 35, "column": 23 }, "end": { "line": 46, "column": 6 } },
+      "8": { "start": { "line": 49, "column": 17 }, "end": { "line": 49, "column": 26 } },
+      "9": { "start": { "line": 50, "column": 4 }, "end": { "line": 54, "column": 5 } },
+      "10": { "start": { "line": 51, "column": 6 }, "end": { "line": 53, "column": 7 } },
+      "11": { "start": { "line": 52, "column": 8 }, "end": { "line": 52, "column": 52 } },
+      "12": { "start": { "line": 56, "column": 4 }, "end": { "line": 56, "column": 16 } },
+      "13": { "start": { "line": 58, "column": 4 }, "end": { "line": 58, "column": 81 } },
+      "14": { "start": { "line": 59, "column": 4 }, "end": { "line": 59, "column": 21 } },
+      "15": { "start": { "line": 69, "column": 2 }, "end": { "line": 71, "column": 3 } },
+      "16": { "start": { "line": 70, "column": 4 }, "end": { "line": 70, "column": 14 } },
+      "17": { "start": { "line": 73, "column": 2 }, "end": { "line": 89, "column": 3 } },
+      "18": { "start": { "line": 74, "column": 25 }, "end": { "line": 84, "column": 6 } },
+      "19": { "start": { "line": 85, "column": 4 }, "end": { "line": 85, "column": 24 } },
+      "20": { "start": { "line": 87, "column": 4 }, "end": { "line": 87, "column": 75 } },
+      "21": { "start": { "line": 88, "column": 4 }, "end": { "line": 88, "column": 14 } },
+      "22": { "start": { "line": 98, "column": 2 }, "end": { "line": 111, "column": 3 } },
+      "23": { "start": { "line": 99, "column": 24 }, "end": { "line": 106, "column": 6 } },
+      "24": { "start": { "line": 107, "column": 4 }, "end": { "line": 107, "column": 23 } },
+      "25": { "start": { "line": 109, "column": 4 }, "end": { "line": 109, "column": 66 } },
+      "26": { "start": { "line": 110, "column": 4 }, "end": { "line": 110, "column": 16 } },
+      "27": { "start": { "line": 114, "column": 0 }, "end": { "line": 119, "column": 2 } }
+    },
+    "fnMap": {
+      "0": {
+        "name": "obtenerTodosLosIngredientes",
+        "decl": { "start": { "line": 11, "column": 15 }, "end": { "line": 11, "column": 42 } },
+        "loc": { "start": { "line": 11, "column": 45 }, "end": { "line": 27, "column": 1 } },
+        "line": 11
+      },
+      "1": {
+        "name": "obtenerIngredientesAgrupadosPorCategoria",
+        "decl": { "start": { "line": 33, "column": 15 }, "end": { "line": 33, "column": 55 } },
+        "loc": { "start": { "line": 33, "column": 58 }, "end": { "line": 61, "column": 1 } },
+        "line": 33
+      },
+      "2": {
+        "name": "obtenerIngredientesPorIds",
+        "decl": { "start": { "line": 68, "column": 15 }, "end": { "line": 68, "column": 40 } },
+        "loc": { "start": { "line": 68, "column": 46 }, "end": { "line": 90, "column": 1 } },
+        "line": 68
+      },
+      "3": {
+        "name": "obtenerIngredientePorId",
+        "decl": { "start": { "line": 97, "column": 15 }, "end": { "line": 97, "column": 38 } },
+        "loc": { "start": { "line": 97, "column": 43 }, "end": { "line": 112, "column": 1 } },
+        "line": 97
+      }
+    },
+    "branchMap": {
+      "0": {
+        "loc": { "start": { "line": 51, "column": 6 }, "end": { "line": 53, "column": 7 } },
+        "type": "if",
+        "locations": [
+          { "start": { "line": 51, "column": 6 }, "end": { "line": 53, "column": 7 } },
+          { "start": {}, "end": {} }
+        ],
+        "line": 51
+      },
+      "1": {
+        "loc": { "start": { "line": 51, "column": 10 }, "end": { "line": 51, "column": 69 } },
+        "type": "binary-expr",
+        "locations": [
+          { "start": { "line": 51, "column": 10 }, "end": { "line": 51, "column": 32 } },
+          { "start": { "line": 51, "column": 36 }, "end": { "line": 51, "column": 69 } }
+        ],
+        "line": 51
+      },
+      "2": {
+        "loc": { "start": { "line": 69, "column": 2 }, "end": { "line": 71, "column": 3 } },
+        "type": "if",
+        "locations": [
+          { "start": { "line": 69, "column": 2 }, "end": { "line": 71, "column": 3 } },
+          { "start": {}, "end": {} }
+        ],
+        "line": 69
+      },
+      "3": {
+        "loc": { "start": { "line": 69, "column": 6 }, "end": { "line": 69, "column": 30 } },
+        "type": "binary-expr",
+        "locations": [
+          { "start": { "line": 69, "column": 6 }, "end": { "line": 69, "column": 10 } },
+          { "start": { "line": 69, "column": 14 }, "end": { "line": 69, "column": 30 } }
+        ],
+        "line": 69
+      }
+    },
+    "s": {
+      "0": 1,
+      "1": 1,
+      "2": 1,
+      "3": 1,
+      "4": 0,
+      "5": 0,
+      "6": 1,
+      "7": 1,
+      "8": 1,
+      "9": 1,
+      "10": 1,
+      "11": 1,
+      "12": 1,
+      "13": 0,
+      "14": 0,
+      "15": 1,
+      "16": 1,
+      "17": 0,
+      "18": 0,
+      "19": 0,
+      "20": 0,
+      "21": 0,
+      "22": 1,
+      "23": 1,
+      "24": 1,
+      "25": 0,
+      "26": 0,
+      "27": 1
+    },
+    "f": { "0": 1, "1": 1, "2": 1, "3": 1 },
+    "b": { "0": [1, 0], "1": [1, 1], "2": [1, 0], "3": [1, 1] },
+    "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    "hash": "a624d22524c9f430b3ad9fa862a5aa691ab75fcd"
+  },
+  "C:\\Users\\andre\\Documents\\Construccion\\chicaiza-2025-b-amct-sw-gr2\\Examen_002\\UnamiRecetas\\src\\services\\spoonacularClient.js": {
+    "path": "C:\\Users\\andre\\Documents\\Construccion\\chicaiza-2025-b-amct-sw-gr2\\Examen_002\\UnamiRecetas\\src\\services\\spoonacularClient.js",
+    "statementMap": {
+      "0": { "start": { "line": 1, "column": 14 }, "end": { "line": 1, "column": 30 } },
+      "1": { "start": { "line": 2, "column": 25 }, "end": { "line": 2, "column": 55 } },
+      "2": { "start": { "line": 8, "column": 17 }, "end": { "line": 8, "column": 82 } },
+      "3": { "start": { "line": 9, "column": 16 }, "end": { "line": 9, "column": 53 } },
+      "4": { "start": { "line": 12, "column": 27 }, "end": { "line": 60, "column": 1 } },
+      "5": { "start": { "line": 68, "column": 22 }, "end": { "line": 68, "column": 61 } },
+      "6": { "start": { "line": 69, "column": 2 }, "end": { "line": 69, "column": 63 } },
+      "7": { "start": { "line": 78, "column": 2 }, "end": { "line": 120, "column": 3 } },
+      "8": { "start": { "line": 79, "column": 16 }, "end": { "line": 79, "column": 61 } },
+      "9": { "start": { "line": 81, "column": 21 }, "end": { "line": 84, "column": 6 } },
+      "10": { "start": { "line": 86, "column": 19 }, "end": { "line": 86, "column": 32 } },
+      "11": { "start": { "line": 89, "column": 4 }, "end": { "line": 89, "column": 79 } },
+      "12": { "start": { "line": 91, "column": 4 }, "end": { "line": 98, "column": 5 } },
+      "13": { "start": { "line": 93, "column": 26 }, "end": { "line": 96, "column": 15 } },
+      "14": { "start": { "line": 97, "column": 6 }, "end": { "line": 97, "column": 70 } },
+      "15": { "start": { "line": 100, "column": 4 }, "end": { "line": 106, "column": 5 } },
+      "16": { "start": { "line": 101, "column": 26 }, "end": { "line": 104, "column": 15 } },
+      "17": { "start": { "line": 105, "column": 6 }, "end": { "line": 105, "column": 75 } },
+      "18": { "start": { "line": 109, "column": 4 }, "end": { "line": 114, "column": 5 } },
+      "19": { "start": { "line": 110, "column": 6 }, "end": { "line": 113, "column": 7 } },
+      "20": { "start": { "line": 111, "column": 8 }, "end": { "line": 111, "column": 74 } },
+      "21": { "start": { "line": 112, "column": 8 }, "end": { "line": 112, "column": 93 } },
+      "22": { "start": { "line": 116, "column": 4 }, "end": { "line": 116, "column": 18 } },
+      "23": { "start": { "line": 118, "column": 4 }, "end": { "line": 118, "column": 72 } },
+      "24": { "start": { "line": 119, "column": 4 }, "end": { "line": 119, "column": 16 } },
+      "25": { "start": { "line": 130, "column": 2 }, "end": { "line": 132, "column": 3 } },
+      "26": { "start": { "line": 131, "column": 4 }, "end": { "line": 131, "column": 14 } },
+      "27": { "start": { "line": 134, "column": 2 }, "end": { "line": 174, "column": 3 } },
+      "28": { "start": { "line": 135, "column": 30 }, "end": { "line": 135, "column": 52 } },
+      "29": { "start": { "line": 136, "column": 16 }, "end": { "line": 136, "column": 55 } },
+      "30": { "start": { "line": 138, "column": 21 }, "end": { "line": 147, "column": 6 } },
+      "31": { "start": { "line": 149, "column": 20 }, "end": { "line": 149, "column": 33 } },
+      "32": { "start": { "line": 152, "column": 4 }, "end": { "line": 168, "column": 5 } },
+      "33": { "start": { "line": 153, "column": 6 }, "end": { "line": 153, "column": 81 } },
+      "34": { "start": { "line": 155, "column": 6 }, "end": { "line": 160, "column": 7 } },
+      "35": { "start": { "line": 156, "column": 8 }, "end": { "line": 159, "column": 9 } },
+      "36": { "start": { "line": 157, "column": 10 }, "end": { "line": 157, "column": 76 } },
+      "37": { "start": { "line": 158, "column": 10 }, "end": { "line": 158, "column": 95 } },
+      "38": { "start": { "line": 162, "column": 6 }, "end": { "line": 167, "column": 7 } },
+      "39": { "start": { "line": 163, "column": 8 }, "end": { "line": 166, "column": 9 } },
+      "40": { "start": { "line": 164, "column": 10 }, "end": { "line": 164, "column": 76 } },
+      "41": { "start": { "line": 165, "column": 10 }, "end": { "line": 165, "column": 95 } },
+      "42": { "start": { "line": 170, "column": 4 }, "end": { "line": 170, "column": 19 } },
+      "43": { "start": { "line": 172, "column": 4 }, "end": { "line": 172, "column": 61 } },
+      "44": { "start": { "line": 173, "column": 4 }, "end": { "line": 173, "column": 14 } },
+      "45": { "start": { "line": 177, "column": 0 }, "end": { "line": 181, "column": 2 } }
+    },
+    "fnMap": {
+      "0": {
+        "name": "traducirIngredienteAIngles",
+        "decl": { "start": { "line": 67, "column": 9 }, "end": { "line": 67, "column": 35 } },
+        "loc": { "start": { "line": 67, "column": 56 }, "end": { "line": 70, "column": 1 } },
+        "line": 67
+      },
+      "1": {
+        "name": "obtenerDetalleReceta",
+        "decl": { "start": { "line": 77, "column": 15 }, "end": { "line": 77, "column": 35 } },
+        "loc": { "start": { "line": 77, "column": 46 }, "end": { "line": 121, "column": 1 } },
+        "line": 77
+      },
+      "2": {
+        "name": "buscarRecetasPorIngredientes",
+        "decl": { "start": { "line": 129, "column": 15 }, "end": { "line": 129, "column": 43 } },
+        "loc": { "start": { "line": 129, "column": 71 }, "end": { "line": 175, "column": 1 } },
+        "line": 129
+      }
+    },
+    "branchMap": {
+      "0": {
+        "loc": { "start": { "line": 8, "column": 17 }, "end": { "line": 8, "column": 82 } },
+        "type": "binary-expr",
+        "locations": [
+          { "start": { "line": 8, "column": 17 }, "end": { "line": 8, "column": 49 } },
+          { "start": { "line": 8, "column": 53 }, "end": { "line": 8, "column": 82 } }
+        ],
+        "line": 8
+      },
+      "1": {
+        "loc": { "start": { "line": 9, "column": 16 }, "end": { "line": 9, "column": 53 } },
+        "type": "binary-expr",
+        "locations": [
+          { "start": { "line": 9, "column": 16 }, "end": { "line": 9, "column": 47 } },
+          { "start": { "line": 9, "column": 51 }, "end": { "line": 9, "column": 53 } }
+        ],
+        "line": 9
+      },
+      "2": {
+        "loc": { "start": { "line": 69, "column": 9 }, "end": { "line": 69, "column": 62 } },
+        "type": "binary-expr",
+        "locations": [
+          { "start": { "line": 69, "column": 9 }, "end": { "line": 69, "column": 40 } },
+          { "start": { "line": 69, "column": 44 }, "end": { "line": 69, "column": 62 } }
+        ],
+        "line": 69
+      },
+      "3": {
+        "loc": { "start": { "line": 91, "column": 4 }, "end": { "line": 98, "column": 5 } },
+        "type": "if",
+        "locations": [
+          { "start": { "line": 91, "column": 4 }, "end": { "line": 98, "column": 5 } },
+          { "start": {}, "end": {} }
+        ],
+        "line": 91
+      },
+      "4": {
+        "loc": { "start": { "line": 100, "column": 4 }, "end": { "line": 106, "column": 5 } },
+        "type": "if",
+        "locations": [
+          { "start": { "line": 100, "column": 4 }, "end": { "line": 106, "column": 5 } },
+          { "start": {}, "end": {} }
+        ],
+        "line": 100
+      },
+      "5": {
+        "loc": { "start": { "line": 109, "column": 4 }, "end": { "line": 114, "column": 5 } },
+        "type": "if",
+        "locations": [
+          { "start": { "line": 109, "column": 4 }, "end": { "line": 114, "column": 5 } },
+          { "start": {}, "end": {} }
+        ],
+        "line": 109
+      },
+      "6": {
+        "loc": { "start": { "line": 129, "column": 58 }, "end": { "line": 129, "column": 69 } },
+        "type": "default-arg",
+        "locations": [
+          { "start": { "line": 129, "column": 67 }, "end": { "line": 129, "column": 69 } }
+        ],
+        "line": 129
+      },
+      "7": {
+        "loc": { "start": { "line": 130, "column": 2 }, "end": { "line": 132, "column": 3 } },
+        "type": "if",
+        "locations": [
+          { "start": { "line": 130, "column": 2 }, "end": { "line": 132, "column": 3 } },
+          { "start": {}, "end": {} }
+        ],
+        "line": 130
+      },
+      "8": {
+        "loc": { "start": { "line": 130, "column": 6 }, "end": { "line": 130, "column": 48 } },
+        "type": "binary-expr",
+        "locations": [
+          { "start": { "line": 130, "column": 6 }, "end": { "line": 130, "column": 19 } },
+          { "start": { "line": 130, "column": 23 }, "end": { "line": 130, "column": 48 } }
+        ],
+        "line": 130
+      },
+      "9": {
+        "loc": { "start": { "line": 155, "column": 6 }, "end": { "line": 160, "column": 7 } },
+        "type": "if",
+        "locations": [
+          { "start": { "line": 155, "column": 6 }, "end": { "line": 160, "column": 7 } },
+          { "start": {}, "end": {} }
+        ],
+        "line": 155
+      },
+      "10": {
+        "loc": { "start": { "line": 162, "column": 6 }, "end": { "line": 167, "column": 7 } },
+        "type": "if",
+        "locations": [
+          { "start": { "line": 162, "column": 6 }, "end": { "line": 167, "column": 7 } },
+          { "start": {}, "end": {} }
+        ],
+        "line": 162
+      }
+    },
+    "s": {
+      "0": 1,
+      "1": 1,
+      "2": 1,
+      "3": 1,
+      "4": 1,
+      "5": 2,
+      "6": 2,
+      "7": 1,
+      "8": 1,
+      "9": 1,
+      "10": 1,
+      "11": 1,
+      "12": 1,
+      "13": 1,
+      "14": 1,
+      "15": 1,
+      "16": 1,
+      "17": 1,
+      "18": 1,
+      "19": 1,
+      "20": 1,
+      "21": 1,
+      "22": 1,
+      "23": 0,
+      "24": 0,
+      "25": 1,
+      "26": 0,
+      "27": 1,
+      "28": 1,
+      "29": 1,
+      "30": 1,
+      "31": 1,
+      "32": 1,
+      "33": 1,
+      "34": 1,
+      "35": 1,
+      "36": 1,
+      "37": 1,
+      "38": 1,
+      "39": 1,
+      "40": 1,
+      "41": 1,
+      "42": 1,
+      "43": 0,
+      "44": 0,
+      "45": 1
+    },
+    "f": { "0": 2, "1": 1, "2": 1 },
+    "b": {
+      "0": [1, 1],
+      "1": [1, 1],
+      "2": [2, 1],
+      "3": [1, 0],
+      "4": [1, 0],
+      "5": [1, 0],
+      "6": [0],
+      "7": [0, 1],
+      "8": [1, 1],
+      "9": [1, 0],
+      "10": [1, 0]
+    },
+    "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    "hash": "0f45c2b2696db47c2e3a1231b3ae6e01f447cbe5"
+  },
+  "C:\\Users\\andre\\Documents\\Construccion\\chicaiza-2025-b-amct-sw-gr2\\Examen_002\\UnamiRecetas\\src\\services\\traductorService.js": {
+    "path": "C:\\Users\\andre\\Documents\\Construccion\\chicaiza-2025-b-amct-sw-gr2\\Examen_002\\UnamiRecetas\\src\\services\\traductorService.js",
+    "statementMap": {
+      "0": { "start": { "line": 1, "column": 14 }, "end": { "line": 1, "column": 30 } },
+      "1": { "start": { "line": 9, "column": 21 }, "end": { "line": 9, "column": 62 } },
+      "2": { "start": { "line": 10, "column": 25 }, "end": { "line": 10, "column": 28 } },
+      "3": { "start": { "line": 13, "column": 14 }, "end": { "line": 13, "column": 23 } },
+      "4": { "start": { "line": 16, "column": 30 }, "end": { "line": 75, "column": 1 } },
+      "5": { "start": { "line": 83, "column": 2 }, "end": { "line": 85, "column": 3 } },
+      "6": { "start": { "line": 84, "column": 4 }, "end": { "line": 84, "column": 17 } },
+      "7": { "start": { "line": 87, "column": 22 }, "end": { "line": 87, "column": 34 } },
+      "8": { "start": { "line": 88, "column": 19 }, "end": { "line": 88, "column": 44 } },
+      "9": { "start": { "line": 91, "column": 2 }, "end": { "line": 93, "column": 3 } },
+      "10": { "start": { "line": 92, "column": 4 }, "end": { "line": 92, "column": 31 } },
+      "11": { "start": { "line": 96, "column": 2 }, "end": { "line": 100, "column": 3 } },
+      "12": { "start": { "line": 97, "column": 23 }, "end": { "line": 97, "column": 54 } },
+      "13": { "start": { "line": 98, "column": 4 }, "end": { "line": 98, "column": 36 } },
+      "14": { "start": { "line": 99, "column": 4 }, "end": { "line": 99, "column": 22 } },
+      "15": { "start": { "line": 102, "column": 2 }, "end": { "line": 126, "column": 3 } },
+      "16": { "start": { "line": 103, "column": 21 }, "end": { "line": 109, "column": 6 } },
+      "17": { "start": { "line": 111, "column": 4 }, "end": { "line": 123, "column": 5 } },
+      "18": { "start": { "line": 112, "column": 25 }, "end": { "line": 112, "column": 66 } },
+      "19": { "start": { "line": 115, "column": 6 }, "end": { "line": 122, "column": 7 } },
+      "20": { "start": { "line": 120, "column": 8 }, "end": { "line": 120, "column": 40 } },
+      "21": { "start": { "line": 121, "column": 8 }, "end": { "line": 121, "column": 26 } },
+      "22": { "start": { "line": 125, "column": 4 }, "end": { "line": 125, "column": 66 } },
+      "23": { "start": { "line": 129, "column": 2 }, "end": { "line": 129, "column": 40 } },
+      "24": { "start": { "line": 136, "column": 21 }, "end": { "line": 136, "column": 40 } },
+      "25": { "start": { "line": 138, "column": 2 }, "end": { "line": 143, "column": 3 } },
+      "26": { "start": { "line": 139, "column": 4 }, "end": { "line": 142, "column": 5 } },
+      "27": { "start": { "line": 140, "column": 24 }, "end": { "line": 140, "column": 59 } },
+      "28": { "start": { "line": 141, "column": 6 }, "end": { "line": 141, "column": 68 } },
+      "29": { "start": { "line": 145, "column": 2 }, "end": { "line": 145, "column": 15 } },
+      "30": { "start": { "line": 152, "column": 20 }, "end": { "line": 152, "column": 48 } },
+      "31": { "start": { "line": 153, "column": 21 }, "end": { "line": 153, "column": 23 } },
+      "32": { "start": { "line": 154, "column": 24 }, "end": { "line": 154, "column": 26 } },
+      "33": { "start": { "line": 156, "column": 2 }, "end": { "line": 173, "column": 3 } },
+      "34": { "start": { "line": 157, "column": 4 }, "end": { "line": 172, "column": 5 } },
+      "35": { "start": { "line": 158, "column": 6 }, "end": { "line": 161, "column": 7 } },
+      "36": { "start": { "line": 159, "column": 8 }, "end": { "line": 159, "column": 73 } },
+      "37": { "start": { "line": 160, "column": 8 }, "end": { "line": 160, "column": 29 } },
+      "38": { "start": { "line": 163, "column": 21 }, "end": { "line": 163, "column": 42 } },
+      "39": { "start": { "line": 164, "column": 6 }, "end": { "line": 166, "column": 7 } },
+      "40": { "start": { "line": 165, "column": 8 }, "end": { "line": 165, "column": 63 } },
+      "41": { "start": { "line": 167, "column": 11 }, "end": { "line": 172, "column": 5 } },
+      "42": { "start": { "line": 168, "column": 6 }, "end": { "line": 168, "column": 71 } },
+      "43": { "start": { "line": 169, "column": 6 }, "end": { "line": 169, "column": 32 } },
+      "44": { "start": { "line": 171, "column": 6 }, "end": { "line": 171, "column": 64 } },
+      "45": { "start": { "line": 175, "column": 2 }, "end": { "line": 177, "column": 3 } },
+      "46": { "start": { "line": 176, "column": 4 }, "end": { "line": 176, "column": 69 } },
+      "47": { "start": { "line": 179, "column": 2 }, "end": { "line": 179, "column": 37 } },
+      "48": { "start": { "line": 188, "column": 2 }, "end": { "line": 190, "column": 3 } },
+      "49": { "start": { "line": 189, "column": 4 }, "end": { "line": 189, "column": 17 } },
+      "50": { "start": { "line": 192, "column": 22 }, "end": { "line": 192, "column": 34 } },
+      "51": { "start": { "line": 194, "column": 2 }, "end": { "line": 196, "column": 3 } },
+      "52": { "start": { "line": 195, "column": 4 }, "end": { "line": 195, "column": 43 } },
+      "53": { "start": { "line": 198, "column": 2 }, "end": { "line": 198, "column": 40 } },
+      "54": { "start": { "line": 205, "column": 2 }, "end": { "line": 205, "column": 51 } },
+      "55": { "start": { "line": 205, "column": 26 }, "end": { "line": 205, "column": 51 } },
+      "56": { "start": { "line": 206, "column": 2 }, "end": { "line": 206, "column": 37 } },
+      "57": { "start": { "line": 213, "column": 2 }, "end": { "line": 213, "column": 39 } },
+      "58": { "start": { "line": 213, "column": 20 }, "end": { "line": 213, "column": 39 } },
+      "59": { "start": { "line": 214, "column": 2 }, "end": { "line": 214, "column": 31 } },
+      "60": { "start": { "line": 221, "column": 2 }, "end": { "line": 221, "column": 29 } },
+      "61": { "start": { "line": 221, "column": 15 }, "end": { "line": 221, "column": 29 } },
+      "62": { "start": { "line": 222, "column": 2 }, "end": { "line": 222, "column": 26 } },
+      "63": { "start": { "line": 229, "column": 2 }, "end": { "line": 229, "column": 16 } },
+      "64": { "start": { "line": 232, "column": 0 }, "end": { "line": 239, "column": 2 } }
+    },
+    "fnMap": {
+      "0": {
+        "name": "traducirFragmento",
+        "decl": { "start": { "line": 82, "column": 15 }, "end": { "line": 82, "column": 32 } },
+        "loc": { "start": { "line": 82, "column": 40 }, "end": { "line": 130, "column": 1 } },
+        "line": 82
+      },
+      "1": {
+        "name": "buscarTraduccionParcial",
+        "decl": { "start": { "line": 135, "column": 9 }, "end": { "line": 135, "column": 32 } },
+        "loc": { "start": { "line": 135, "column": 40 }, "end": { "line": 146, "column": 1 } },
+        "line": 135
+      },
+      "2": {
+        "name": "traducirTextoLargo",
+        "decl": { "start": { "line": 151, "column": 15 }, "end": { "line": 151, "column": 33 } },
+        "loc": { "start": { "line": 151, "column": 41 }, "end": { "line": 180, "column": 1 } },
+        "line": 151
+      },
+      "3": {
+        "name": "traducir",
+        "decl": { "start": { "line": 187, "column": 15 }, "end": { "line": 187, "column": 23 } },
+        "loc": { "start": { "line": 187, "column": 31 }, "end": { "line": 199, "column": 1 } },
+        "line": 187
+      },
+      "4": {
+        "name": "traducirIngrediente",
+        "decl": { "start": { "line": 204, "column": 15 }, "end": { "line": 204, "column": 34 } },
+        "loc": { "start": { "line": 204, "column": 54 }, "end": { "line": 207, "column": 1 } },
+        "line": 204
+      },
+      "5": {
+        "name": "traducirDescripcionIngrediente",
+        "decl": { "start": { "line": 212, "column": 15 }, "end": { "line": 212, "column": 45 } },
+        "loc": { "start": { "line": 212, "column": 59 }, "end": { "line": 215, "column": 1 } },
+        "line": 212
+      },
+      "6": {
+        "name": "traducirTituloReceta",
+        "decl": { "start": { "line": 220, "column": 15 }, "end": { "line": 220, "column": 35 } },
+        "loc": { "start": { "line": 220, "column": 44 }, "end": { "line": 223, "column": 1 } },
+        "line": 220
+      },
+      "7": {
+        "name": "limpiarCache",
+        "decl": { "start": { "line": 228, "column": 9 }, "end": { "line": 228, "column": 21 } },
+        "loc": { "start": { "line": 228, "column": 24 }, "end": { "line": 230, "column": 1 } },
+        "line": 228
+      }
+    },
+    "branchMap": {
+      "0": {
+        "loc": { "start": { "line": 83, "column": 2 }, "end": { "line": 85, "column": 3 } },
+        "type": "if",
+        "locations": [
+          { "start": { "line": 83, "column": 2 }, "end": { "line": 85, "column": 3 } },
+          { "start": {}, "end": {} }
+        ],
+        "line": 83
+      },
+      "1": {
+        "loc": { "start": { "line": 83, "column": 6 }, "end": { "line": 83, "column": 35 } },
+        "type": "binary-expr",
+        "locations": [
+          { "start": { "line": 83, "column": 6 }, "end": { "line": 83, "column": 12 } },
+          { "start": { "line": 83, "column": 16 }, "end": { "line": 83, "column": 35 } }
+        ],
+        "line": 83
+      },
+      "2": {
+        "loc": { "start": { "line": 91, "column": 2 }, "end": { "line": 93, "column": 3 } },
+        "type": "if",
+        "locations": [
+          { "start": { "line": 91, "column": 2 }, "end": { "line": 93, "column": 3 } },
+          { "start": {}, "end": {} }
+        ],
+        "line": 91
+      },
+      "3": {
+        "loc": { "start": { "line": 96, "column": 2 }, "end": { "line": 100, "column": 3 } },
+        "type": "if",
+        "locations": [
+          { "start": { "line": 96, "column": 2 }, "end": { "line": 100, "column": 3 } },
+          { "start": {}, "end": {} }
+        ],
+        "line": 96
+      },
+      "4": {
+        "loc": { "start": { "line": 111, "column": 4 }, "end": { "line": 123, "column": 5 } },
+        "type": "if",
+        "locations": [
+          { "start": { "line": 111, "column": 4 }, "end": { "line": 123, "column": 5 } },
+          { "start": {}, "end": {} }
+        ],
+        "line": 111
+      },
+      "5": {
+        "loc": { "start": { "line": 111, "column": 8 }, "end": { "line": 111, "column": 96 } },
+        "type": "binary-expr",
+        "locations": [
+          { "start": { "line": 111, "column": 8 }, "end": { "line": 111, "column": 21 } },
+          { "start": { "line": 111, "column": 25 }, "end": { "line": 111, "column": 51 } },
+          { "start": { "line": 111, "column": 55 }, "end": { "line": 111, "column": 96 } }
+        ],
+        "line": 111
+      },
+      "6": {
+        "loc": { "start": { "line": 115, "column": 6 }, "end": { "line": 122, "column": 7 } },
+        "type": "if",
+        "locations": [
+          { "start": { "line": 115, "column": 6 }, "end": { "line": 122, "column": 7 } },
+          { "start": {}, "end": {} }
+        ],
+        "line": 115
+      },
+      "7": {
+        "loc": { "start": { "line": 116, "column": 8 }, "end": { "line": 118, "column": 48 } },
+        "type": "binary-expr",
+        "locations": [
+          { "start": { "line": 116, "column": 8 }, "end": { "line": 116, "column": 18 } },
+          { "start": { "line": 117, "column": 8 }, "end": { "line": 117, "column": 59 } },
+          { "start": { "line": 118, "column": 8 }, "end": { "line": 118, "column": 48 } }
+        ],
+        "line": 116
+      },
+      "8": {
+        "loc": { "start": { "line": 139, "column": 4 }, "end": { "line": 142, "column": 5 } },
+        "type": "if",
+        "locations": [
+          { "start": { "line": 139, "column": 4 }, "end": { "line": 142, "column": 5 } },
+          { "start": {}, "end": {} }
+        ],
+        "line": 139
+      },
+      "9": {
+        "loc": { "start": { "line": 157, "column": 4 }, "end": { "line": 172, "column": 5 } },
+        "type": "if",
+        "locations": [
+          { "start": { "line": 157, "column": 4 }, "end": { "line": 172, "column": 5 } },
+          { "start": { "line": 167, "column": 11 }, "end": { "line": 172, "column": 5 } }
+        ],
+        "line": 157
+      },
+      "10": {
+        "loc": { "start": { "line": 158, "column": 6 }, "end": { "line": 161, "column": 7 } },
+        "type": "if",
+        "locations": [
+          { "start": { "line": 158, "column": 6 }, "end": { "line": 161, "column": 7 } },
+          { "start": {}, "end": {} }
+        ],
+        "line": 158
+      },
+      "11": {
+        "loc": { "start": { "line": 167, "column": 11 }, "end": { "line": 172, "column": 5 } },
+        "type": "if",
+        "locations": [
+          { "start": { "line": 167, "column": 11 }, "end": { "line": 172, "column": 5 } },
+          { "start": { "line": 170, "column": 11 }, "end": { "line": 172, "column": 5 } }
+        ],
+        "line": 167
+      },
+      "12": {
+        "loc": { "start": { "line": 171, "column": 26 }, "end": { "line": 171, "column": 52 } },
+        "type": "cond-expr",
+        "locations": [
+          { "start": { "line": 171, "column": 44 }, "end": { "line": 171, "column": 47 } },
+          { "start": { "line": 171, "column": 50 }, "end": { "line": 171, "column": 52 } }
+        ],
+        "line": 171
+      },
+      "13": {
+        "loc": { "start": { "line": 175, "column": 2 }, "end": { "line": 177, "column": 3 } },
+        "type": "if",
+        "locations": [
+          { "start": { "line": 175, "column": 2 }, "end": { "line": 177, "column": 3 } },
+          { "start": {}, "end": {} }
+        ],
+        "line": 175
+      },
+      "14": {
+        "loc": { "start": { "line": 188, "column": 2 }, "end": { "line": 190, "column": 3 } },
+        "type": "if",
+        "locations": [
+          { "start": { "line": 188, "column": 2 }, "end": { "line": 190, "column": 3 } },
+          { "start": {}, "end": {} }
+        ],
+        "line": 188
+      },
+      "15": {
+        "loc": { "start": { "line": 188, "column": 6 }, "end": { "line": 188, "column": 35 } },
+        "type": "binary-expr",
+        "locations": [
+          { "start": { "line": 188, "column": 6 }, "end": { "line": 188, "column": 12 } },
+          { "start": { "line": 188, "column": 16 }, "end": { "line": 188, "column": 35 } }
+        ],
+        "line": 188
+      },
+      "16": {
+        "loc": { "start": { "line": 194, "column": 2 }, "end": { "line": 196, "column": 3 } },
+        "type": "if",
+        "locations": [
+          { "start": { "line": 194, "column": 2 }, "end": { "line": 196, "column": 3 } },
+          { "start": {}, "end": {} }
+        ],
+        "line": 194
+      },
+      "17": {
+        "loc": { "start": { "line": 205, "column": 2 }, "end": { "line": 205, "column": 51 } },
+        "type": "if",
+        "locations": [
+          { "start": { "line": 205, "column": 2 }, "end": { "line": 205, "column": 51 } },
+          { "start": {}, "end": {} }
+        ],
+        "line": 205
+      },
+      "18": {
+        "loc": { "start": { "line": 213, "column": 2 }, "end": { "line": 213, "column": 39 } },
+        "type": "if",
+        "locations": [
+          { "start": { "line": 213, "column": 2 }, "end": { "line": 213, "column": 39 } },
+          { "start": {}, "end": {} }
+        ],
+        "line": 213
+      },
+      "19": {
+        "loc": { "start": { "line": 221, "column": 2 }, "end": { "line": 221, "column": 29 } },
+        "type": "if",
+        "locations": [
+          { "start": { "line": 221, "column": 2 }, "end": { "line": 221, "column": 29 } },
+          { "start": {}, "end": {} }
+        ],
+        "line": 221
+      }
+    },
+    "s": {
+      "0": 1,
+      "1": 1,
+      "2": 1,
+      "3": 1,
+      "4": 1,
+      "5": 2,
+      "6": 0,
+      "7": 2,
+      "8": 2,
+      "9": 2,
+      "10": 0,
+      "11": 2,
+      "12": 1,
+      "13": 1,
+      "14": 1,
+      "15": 1,
+      "16": 1,
+      "17": 1,
+      "18": 1,
+      "19": 1,
+      "20": 1,
+      "21": 1,
+      "22": 0,
+      "23": 0,
+      "24": 0,
+      "25": 0,
+      "26": 0,
+      "27": 0,
+      "28": 0,
+      "29": 0,
+      "30": 0,
+      "31": 0,
+      "32": 0,
+      "33": 0,
+      "34": 0,
+      "35": 0,
+      "36": 0,
+      "37": 0,
+      "38": 0,
+      "39": 0,
+      "40": 0,
+      "41": 0,
+      "42": 0,
+      "43": 0,
+      "44": 0,
+      "45": 0,
+      "46": 0,
+      "47": 0,
+      "48": 4,
+      "49": 2,
+      "50": 2,
+      "51": 2,
+      "52": 0,
+      "53": 2,
+      "54": 0,
+      "55": 0,
+      "56": 0,
+      "57": 0,
+      "58": 0,
+      "59": 0,
+      "60": 0,
+      "61": 0,
+      "62": 0,
+      "63": 3,
+      "64": 1
+    },
+    "f": { "0": 2, "1": 0, "2": 0, "3": 4, "4": 0, "5": 0, "6": 0, "7": 3 },
+    "b": {
+      "0": [0, 2],
+      "1": [2, 2],
+      "2": [0, 2],
+      "3": [1, 1],
+      "4": [1, 0],
+      "5": [1, 1, 1],
+      "6": [1, 0],
+      "7": [1, 1, 1],
+      "8": [0, 0],
+      "9": [0, 0],
+      "10": [0, 0],
+      "11": [0, 0],
+      "12": [0, 0],
+      "13": [0, 0],
+      "14": [2, 2],
+      "15": [4, 2],
+      "16": [0, 2],
+      "17": [0, 0],
+      "18": [0, 0],
+      "19": [0, 0]
+    },
+    "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    "hash": "4206ae72a92535033ad4c69183f67e8acd3c92e8"
+  }
 }

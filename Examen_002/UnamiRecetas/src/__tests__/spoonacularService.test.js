@@ -19,12 +19,14 @@ describe('spoonacularClient', () => {
   });
 
   test('obtenerDetalleReceta traduce campos y extendedIngredients', async () => {
-    axios.get.mockResolvedValue({ data: {
-      title: 'My Title',
-      summary: '<p>Resumen</p>',
-      instructions: '<div>Instrucciones</div>',
-      extendedIngredients: [{ name: 'salt', original: '1 tsp salt' }]
-    }});
+    axios.get.mockResolvedValue({
+      data: {
+        title: 'My Title',
+        summary: '<p>Resumen</p>',
+        instructions: '<div>Instrucciones</div>',
+        extendedIngredients: [{ name: 'salt', original: '1 tsp salt' }],
+      },
+    });
 
     const receta = await client.obtenerDetalleReceta(42);
 
@@ -38,13 +40,15 @@ describe('spoonacularClient', () => {
   });
 
   test('buscarRecetasPorIngredientes traduce títulos y ingredientes', async () => {
-    axios.get.mockResolvedValue({ data: [
-      {
-        title: 'R1',
-        usedIngredients: [{ name: 'salt', original: 'orig' }],
-        missedIngredients: [{ name: 'pepper', original: 'orig2' }]
-      }
-    ]});
+    axios.get.mockResolvedValue({
+      data: [
+        {
+          title: 'R1',
+          usedIngredients: [{ name: 'salt', original: 'orig' }],
+          missedIngredients: [{ name: 'pepper', original: 'orig2' }],
+        },
+      ],
+    });
 
     const recetas = await client.buscarRecetasPorIngredientes(['salt'], 5);
 
@@ -55,12 +59,14 @@ describe('spoonacularClient', () => {
   });
 
   test('buscarRecetasPorIngredientes maneja receta con solo usedIngredients', async () => {
-    axios.get.mockResolvedValue({ data: [
-      {
-        title: 'OnlyUsed',
-        usedIngredients: [{ name: 'salt', original: 'orig' }],
-      }
-    ]});
+    axios.get.mockResolvedValue({
+      data: [
+        {
+          title: 'OnlyUsed',
+          usedIngredients: [{ name: 'salt', original: 'orig' }],
+        },
+      ],
+    });
 
     const recetas = await client.buscarRecetasPorIngredientes(['salt'], 3);
 
@@ -71,12 +77,14 @@ describe('spoonacularClient', () => {
   });
 
   test('buscarRecetasPorIngredientes maneja receta con solo missedIngredients', async () => {
-    axios.get.mockResolvedValue({ data: [
-      {
-        title: 'OnlyMissed',
-        missedIngredients: [{ name: 'pepper', original: 'orig2' }]
-      }
-    ]});
+    axios.get.mockResolvedValue({
+      data: [
+        {
+          title: 'OnlyMissed',
+          missedIngredients: [{ name: 'pepper', original: 'orig2' }],
+        },
+      ],
+    });
 
     const recetas = await client.buscarRecetasPorIngredientes(['pepper'], 2);
 

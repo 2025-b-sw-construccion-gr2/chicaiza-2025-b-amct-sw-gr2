@@ -36,14 +36,19 @@ describe('ingredienteService', () => {
   });
 
   test('obtenerIngredientesPorIds devuelve ingredientes cuando ids no vacío', async () => {
-    const mock = [{ id: 1, nombre: 'A' }, { id: 2, nombre: 'B' }];
+    const mock = [
+      { id: 1, nombre: 'A' },
+      { id: 2, nombre: 'B' },
+    ];
     Ingrediente.findAll.mockResolvedValue(mock);
 
     const res = await service.obtenerIngredientesPorIds([1, 2]);
 
-    expect(Ingrediente.findAll).toHaveBeenCalledWith(expect.objectContaining({
-      where: { id: [1, 2] },
-    }));
+    expect(Ingrediente.findAll).toHaveBeenCalledWith(
+      expect.objectContaining({
+        where: { id: [1, 2] },
+      }),
+    );
     expect(res).toEqual(mock);
   });
 
