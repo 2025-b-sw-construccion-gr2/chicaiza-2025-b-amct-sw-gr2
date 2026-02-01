@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --blanco: #FFFFFF;
+            --negro: #121212;
+            --verde: #4f772d;
+            --cafe: #4B3621;
+            --crema: #F9F7F2;
+            --transicion: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--blanco);
+            color: var(--negro);
+            overflow-x: hidden;
+        }
+
+        /* --- NAVIGATION --- */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 10%;
+            background: var(--blanco);
+            border-bottom: 1px solid var(--negro);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 2000;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            text-decoration: none;
+            color: var(--negro);
+            letter-spacing: -1px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--negro);
+            margin-left: 2rem;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 600;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 1px;
+            bottom: -5px;
+            left: 0;
+            background-color: var(--verde);
+            transition: var(--transicion);
+        }
+
+        .nav-links a:hover::after { width: 100%; }
+
+        /* --- HERO SECTION CON IMAGEN --- */
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 10%;
+            position: relative;
+            background-image: url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=2070&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: var(--blanco);
+            margin-bottom: 4rem;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: 1;
+        }
+
+        .hero h1, .hero p {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(3.5rem, 10vw, 7rem);
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            animation: fadeInDown 1.2s ease;
+        }
+
+        .hero h1 span {
+            font-style: italic;
+            color: var(--verde);
+            display: block;
+        }
+
+        .hero p {
+            letter-spacing: 7px;
+            text-transform: uppercase;
+            font-size: 1rem;
+            font-weight: 300;
+            animation: fadeInUp 1.5s ease;
+        }
+
+        /* --- SECCIÓN EXPLICATIVA --- */
+        .content-section {
+            padding: 10rem 15%;
+            background: var(--blanco);
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 6rem;
+            align-items: center;
+        }
+
+        .text-block {
+            animation: revealOnScroll linear forwards;
+            animation-timeline: view();
+            animation-range: entry 100px;
+        }
+
+        .text-block h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            margin-bottom: 2rem;
+            color: var(--cafe);
+            line-height: 1;
+        }
+
+        .text-block p {
+            font-size: 1.1rem;
+            color: #333;
+            margin-bottom: 2.5rem;
+            line-height: 1.8;
+            font-weight: 300;
+        }
+
+        .image-frame {
+            position: relative;
+            width: 100%;
+            height: 500px;
+            background: url('https://images.unsplash.com/photo-1495195129352-aec325a55b65?q=80&w=1776&auto=format&fit=crop') center/cover;
+            border: 1px solid var(--negro);
+        }
+
+        .image-frame::before {
+            content: "";
+            position: absolute;
+            top: 20px; left: 20px; right: -20px; bottom: -20px;
+            border: 1px solid var(--verde);
+            z-index: -1;
+            transition: var(--transicion);
+        }
+
+        .image-frame:hover::before {
+            transform: translate(-10px, -10px);
+        }
+
+        /* --- BOTÓN CALL TO ACTION --- */
+        .cta-button {
+            display: inline-block;
+            padding: 1.2rem 3rem;
+            background: var(--negro);
+            color: var(--blanco);
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 600;
+            font-size: 0.8rem;
+            transition: var(--transicion);
+        }
+
+        .cta-button:hover {
+            background: var(--verde);
+            transform: translateY(-5px);
+        }
+
+        /* --- ANIMACIONES --- */
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes revealOnScroll {
+            from { opacity: 0; transform: translateX(-50px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        footer {
+            padding: 6rem 2rem;
+            text-align: center;
+            background: var(--negro);
+            color: var(--blanco);
+            letter-spacing: 3px;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+        }
+
+        @media (max-width: 900px) {
+            .content-section { grid-template-columns: 1fr; padding: 5rem 10%; }
+            .hero h1 { font-size: 4rem; }
+        }
+
+        /* Imagen decorativa creativa */
+        .image-container {
+            position: relative;
+            padding: 20px;
+            z-index: 1;
+        }
+
+        .image-box {
+            width: 100%;
+            height: 600px;
+            background: var(--negro);
+            background-image: url('https://images.unsplash.com/photo-1547592166-23ac45744acd?q=80&w=1771&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            border: 1px solid var(--negro);
+            transition: var(--transicion);
+        }
+
+        .image-container::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 80%;
+            height: 80%;
+            border: 1px solid var(--verde);
+            z-index: -1;
+            transform: translate(30px, -30px);
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="/" class="logo">UMAMI</a>
+        <div class="nav-links">
+            <a href="/">Inicio</a>
+            <a href="/ingredientes">Buscar Recetas</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <h1>Descubre la esencia <span>Umami</span></h1>
+        <p>Cocina con propósito, no solo ingredientes.</p>
+    </header>
+
+    <section class="content-section">
+        <div class="text-block">
+            <h2>El Quinto Sabor</h2>
+            <p>Proveniente del japonés, el Umami es el corazón de lo que hace que una comida sea memorable. Es esa sensación profunda, sabrosa y duradera que une a todos los demás sabores. En <strong>Recetas Umami</strong>, no buscamos lo simple; buscamos lo sublime.</p>
+
+            <h2>¿Para qué sirve?</h2>
+            <p>Este sistema ha sido diseñado para transformar los ingredientes cotidianos en experiencias extraordinarias. Selecciona lo que tienes en casa y deja que nuestros algoritmos encuentren el equilibrio perfecto para despertar tu paladar.</p>
+
+            <a href="/ingredientes" class="cta-button">Comenzar Experiencia &rarr;</a>
+        </div>
+        <div class="image-container">
+            <div class="image-box"></div>
+        </div>
+    </section>
+
+    <footer>
+        &copy; 2026 Recetas Umami &mdash; La Alquimia del Gusto
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --blanco: #FFFFFF;
+            --negro: #1A1A1A;
+            --verde: #2D5A27;
+            --cafe: #4B3621;
+            --crema: #F9F7F2;
+            --transicion: all 0.4s cubic-bezier(0.25, 1, 0.3, 1);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--crema);
+            color: var(--negro);
+        }
+
+        /* --- NAVEGACIÓN --- */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 10%;
+            background: var(--blanco);
+            border-bottom: 1px solid var(--negro);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            text-decoration: none;
+            color: var(--negro);
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--negro);
+            margin-left: 2rem;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 600;
+        }
+
+        /* --- HEADER --- */
+        header.page-header {
+            text-align: center;
+            padding: 4rem 1rem;
+            animation: fadeIn 1s ease;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            color: var(--cafe);
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            color: var(--verde);
+            font-size: 0.8rem;
+        }
+
+        /* --- GRID DE INGREDIENTES --- */
+        main {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 2rem 10rem;
+        }
+
+        .category-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            margin: 3rem 0 1.5rem;
+            border-bottom: 1px solid var(--negro);
+            padding-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .category-icon {
+            font-size: 1.5rem;
+        }
+
+        .ingredient-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            gap: 20px;
+        }
+
+        .ingredient-item { display: block; }
+        .ingredient-item input { display: none; }
+
+        .ingredient-card {
+            background: var(--blanco);
+            border: 1px solid var(--negro);
+            cursor: pointer;
+            transition: var(--transicion);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 1.2rem 0.8rem;
+        }
+
+        /* Contenedor de imagen circular */
+        .img-container {
+            width: 80px;
+            height: 80px;
+            background-color: #e5e5e5;
+            overflow: hidden;
+            position: relative;
+            border-radius: 50%;
+            border: 3px solid var(--negro);
+            flex-shrink: 0;
+        }
+
+        .img-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transicion);
+        }
+
+        .ingredient-name {
+            padding: 0.8rem 0.5rem 0;
+            text-align: center;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* --- ESTADOS DE SELECCIÓN --- */
+        .ingredient-item input:checked + .ingredient-card {
+            background-color: var(--verde);
+            color: var(--blanco);
+            transform: translateY(-5px);
+        }
+
+        .ingredient-item input:checked + .ingredient-card .img-container {
+            border-color: var(--blanco);
+        }
+
+        .ingredient-item input:checked + .ingredient-card img {
+            opacity: 0.7;
+            filter: grayscale(100%);
+        }
+
+        .ingredient-card:hover {
+            box-shadow: 8px 8px 0px var(--cafe);
+        }
+
+        /* --- BOTÓN DE BÚSQUEDA --- */
+        .search-footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            text-align: center;
+            border-top: 1px solid var(--negro);
+        }
+
+        .btn-search {
+            background: var(--negro);
+            color: var(--blanco);
+            padding: 1.2rem 4rem;
+            border: none;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: var(--transicion);
+        }
+
+        .btn-search:hover {
+            background: var(--verde);
+            transform: scale(1.05);
+        }
+
+        .btn-search:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .selected-count {
+            display: inline-block;
+            margin-left: 1rem;
+            background: var(--verde);
+            color: var(--blanco);
+            padding: 0.3rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+
+        .empty-message {
+            text-align: center;
+            padding: 4rem 2rem;
+        }
+
+        .empty-message h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: var(--cafe);
+            margin-bottom: 1rem;
+        }
+
+        .empty-message p {
+            color: var(--negro);
+            opacity: 0.7;
+        }
+
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="/" class="logo">UMAMI</a>
+        <div class="nav-links">
+            <a href="/">Inicio</a>
+            <a href="/ingredientes">Buscar Recetas</a>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <h1>Tu Despensa</h1>
+        <p class="subtitle">Selecciona tus ingredientes</p>
+    </header>
+
+    <% if (ingredientesPorCategoria && ingredientesPorCategoria.size > 0) { %>
+        <form action="/recetas" method="post" id="ingredientesForm">
+            <main>
+                <% for (const [categoria, ingredientes] of ingredientesPorCategoria) { %>
+                    <h2 class="category-title">
+                        <span class="category-icon"><%= categoria.icono %></span>
+                        <%= categoria.nombre %>
+                    </h2>
+                    <div class="ingredient-grid">
+                        <% for (const ingrediente of ingredientes) { %>
+                            <label class="ingredient-item">
+                                <input type="checkbox"
+                                       name="ingredientes"
+                                       value="<%= ingrediente.id %>"
+                                       onchange="actualizarContador()">
+                                <div class="ingredient-card">
+                                    <div class="img-container">
+                                        <% if (ingrediente.imagen_url) { %>
+                                            <img src="<%= ingrediente.imagen_url %>"
+                                                 alt="<%= ingrediente.nombre %>"
+                                                 onerror="this.src='https://images.unsplash.com/photo-1490818387583-1baba5e638af?auto=format&fit=crop&w=300&q=80'">
+                                        <% } else { %>
+                                            <img src="https://images.unsplash.com/photo-1490818387583-1baba5e638af?auto=format&fit=crop&w=300&q=80"
+                                                 alt="<%= ingrediente.nombre %>">
+                                        <% } %>
+                                    </div>
+                                    <div class="ingredient-name"><%= ingrediente.nombre %></div>
+                                </div>
+                            </label>
+                        <% } %>
+                    </div>
+                <% } %>
+            </main>
+
+            <div class="search-footer">
+                <button type="submit" class="btn-search" id="btnBuscar" disabled>
+                    Buscar Recetas Umami
+                </button>
+                <span class="selected-count" id="contadorSpan" style="display: none;">
+                    <span id="contador">0</span> seleccionados
+                </span>
+            </div>
+        </form>
+    <% } else { %>
+        <main>
+            <div class="empty-message">
+                <h2>⚠️ Despensa Vacía</h2>
+                <p>No hay ingredientes disponibles en la base de datos.</p>
+                <p>Por favor, ejecute el script SQL para agregar datos.</p>
+            </div>
+        </main>
+    <% } %>
+
+    <script>
+        function actualizarContador() {
+            const checkboxes = document.querySelectorAll('input[name="ingredientes"]:checked');
+            const contador = document.getElementById('contador');
+            const contadorSpan = document.getElementById('contadorSpan');
+            const btnBuscar = document.getElementById('btnBuscar');
+
+            const count = checkboxes.length;
+            contador.textContent = count;
+            contadorSpan.style.display = count > 0 ? 'inline-block' : 'none';
+            btnBuscar.disabled = count === 0;
+        }
+    </script>
+</body>
+</html>
